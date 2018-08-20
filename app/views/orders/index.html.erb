@@ -1,0 +1,6 @@
+<% @orders.each do |order| %>
+<h2>Your Orders</h2>
+<ul>
+  <li><%= link_to order.food.name %></li>
+</ul>
+<% end %>
