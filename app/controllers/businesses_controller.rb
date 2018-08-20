@@ -5,7 +5,7 @@ class BusinessesController < ApplicationController
     @markers = @businesses.map do |business|
       {
         lat: business.latitude,
-        lng: business.longitude
+        lng: business.longitude,
       }
   end
 end
