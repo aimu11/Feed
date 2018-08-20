@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_19_141605) do
+ActiveRecord::Schema.define(version: 2018_08_20_130703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,11 @@ ActiveRecord::Schema.define(version: 2018_08_19_141605) do
     t.string "phone_number"
     t.string "description"
     t.string "dietary_category"
-    t.string "type"
+    t.string "business_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -33,6 +35,8 @@ ActiveRecord::Schema.define(version: 2018_08_19_141605) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
   create_table "foods", force: :cascade do |t|
@@ -40,15 +44,14 @@ ActiveRecord::Schema.define(version: 2018_08_19_141605) do
     t.string "description"
     t.integer "price"
     t.integer "portion"
-    t.time "order_before"
-    t.time "pickup_start"
-    t.string "pickup"
-    t.time "end"
     t.string "dietary_category"
     t.string "food_type"
     t.bigint "business_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "order_before"
+    t.datetime "pickup_start"
+    t.datetime "pickup_end"
     t.index ["business_id"], name: "index_foods_on_business_id"
   end
 
@@ -73,6 +76,8 @@ ActiveRecord::Schema.define(version: 2018_08_19_141605) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "businesses", "users"
+  add_foreign_key "customers", "users"
   add_foreign_key "foods", "businesses"
   add_foreign_key "orders", "customers"
   add_foreign_key "orders", "foods"
