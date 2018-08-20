@@ -15,7 +15,6 @@ class CustomersController < ApplicationController
   def update
   end
 
-
   private
 
   def find_customer

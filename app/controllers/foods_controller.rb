@@ -5,16 +5,20 @@ class FoodsController < ApplicationController
 
   def show
     find_foods
-    @foods
   end
 
   def new
-    @foods = Food.new(food_params)
   end
 
   def create
     @foods = Food.new(food_params)
-    @food.save
+    @foods.business = Business.find(params[:business_id])
+
+    if @foods.save
+     redirect_to business_path
+   else
+     redirect_to business_path
+   end
   end
 
   def edit
@@ -28,12 +32,13 @@ class FoodsController < ApplicationController
 
   def destroy
     find_foods
+    @foods.destroy
   end
 
   private
 
   def find_foods
-    @foods = Food.find(params[food_params])
+    @foods = Food.find(params[:id])
   end
 
   def food_params
