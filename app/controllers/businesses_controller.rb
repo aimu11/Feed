@@ -7,5 +7,6 @@ class BusinessesController < ApplicationController
         lat: business.latitude,
         lng: business.longitude,
       }
+    end
   end
 end
