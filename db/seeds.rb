@@ -259,9 +259,21 @@ Business.create!(business_params)
 #     customer: Customer.all.sample,
 #     food: Food.all.sample
 #   )
-
-
  end
 
+order_params = [
+  {
+    customer: Customer.all.sample,
+    food: Food.all.sample
+  },
+  {
+    customer: Customer.all.sample,
+    food: Food.all.sample
+  },
+  {
+    customer: Customer.all.sample,
+    food: Food.all.sample
+  },
+  ]
 
-
+   Order.create!(order_params)
