@@ -1,0 +1,15 @@
+<div id="box">
+<!-- test -->
+  <div class="dashboard-container">
+    <div class="dashboard-header">asdfas</div>
+
+    <div class="orders-container">
+      <h3>Your orders</h3>
+      <ul class="list-group">
+        <% current_user.customer.orders.each do |order| %>
+        <li class="list-group-item"><%= order %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
