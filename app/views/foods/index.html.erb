@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="results-column">
+    <div class="dietary-filters">
+      <h2>Dietary</h2>
+      <a><li class="dietary-category">Vegan</li></a>
+      <li class="dietary-category">Mochachino</li>
+      <li class="dietary-category">Lactose-free</li>
+      <li class="dietary-category">Vegetarian</li>
+      <li class="dietary-category">Pescatarian</li>
+      <li class="dietary-category">Meat</li>
+      <li class="dietary-category">Dairy</li>
+    </div>
+
+    <div class="food-filter">
+      <h2>Food filters</h2>
+      <%= simple_form_for "Foodtypes" do |f| %>
+        <%= f.input :food_type, input_html: { multiple: true } %>
+      <% end %>
+    </div>
+
+    <div class="food-items">
+      <ul>
+        <% @foods.each do |food| %>
+        <li>
+          <%= food.food_type %> |
+          <%= food.dietary_category  %> |
+          <%= food.name %> |
+          <%= food.business.name %> |
+          <%= food.price %> |
+        </li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="results-map">
+  </div>
+</div>
