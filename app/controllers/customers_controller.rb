@@ -6,6 +6,12 @@ class CustomersController < ApplicationController
   def show
   end
 
+  def dashboard
+    if current_user.businesses
+      redirect_to business_dashboard_path
+    end
+  end
+
   def new
   end
 

@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   resources :customers, only: [:index, :show, :new, :create, :edit, :update]
 
   get "/orders", to: "orders#index"
+  get "dashboard", to: "customers#dashboard", as: :dashboard
+  get "business_dashboard", to: "businesses#dashboard", as: :business_dashboard
 
-  resources :businesses, only: [:show, :new, :create, :edit, :update, :destroy]
+
+ resources :businesses, only: [:show, :new, :create, :edit, :update, :destroy]
 
   resources :foods, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :orders, only: [ :create, :index]
