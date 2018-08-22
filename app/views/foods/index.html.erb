@@ -1,14 +1,15 @@
-<div class="wrapper">
+<div class="results-wrapper">
   <div class="results-column">
     <div class="dietary-filters">
       <h2>Dietary</h2>
-      <a><li class="dietary-category">Vegan</li></a>
-      <li class="dietary-category">Mochachino</li>
-      <li class="dietary-category">Lactose-free</li>
-      <li class="dietary-category">Vegetarian</li>
-      <li class="dietary-category">Pescatarian</li>
-      <li class="dietary-category">Meat</li>
-      <li class="dietary-category">Dairy</li>
+<br>
+      <a><li class="dietary-category"><%= image_tag "foods/category_icons/vegan" %> Vegan</li></a>
+      <li class="dietary-category"><%= image_tag "foods/category_icons/pescatarian" %> Mochachino</li>
+      <li class="dietary-category"><%= image_tag "foods/category_icons/lactose-free" %> Lactose-free</li>
+      <li class="dietary-category"><%= image_tag "foods/category_icons/vegetarian" %> Vegetarian</li>
+      <li class="dietary-category selected"><%= image_tag "foods/category_icons/pescatarian" %> Pescatarian</li>
+      <li class="dietary-category"><%= image_tag "foods/category_icons/meat" %> Meat</li>
+      <li class="dietary-category"><%= image_tag "foods/category_icons/dairy" %> Dairy</li>
     </div>
 
     <div class="food-filter">
@@ -21,13 +22,19 @@
     <div class="food-items">
       <ul>
         <% @foods.each do |food| %>
-        <li>
-          <%= food.food_type %> |
-          <%= food.dietary_category  %> |
-          <%= food.name %> |
-          <%= food.business.name %> |
-          <%= food.price %> |
-        </li>
+        <div class="food-card">
+          <li>
+            <%= image_tag "foods/category_icons/meat" %> <%= image_tag "foods/category_icons/vegan" %> <br>
+            <div class="food-name">
+              <%= food.name %>
+            </div>
+          <div class="restaurant_name">
+            <%= food.business.name %>
+          </div>
+            <%= food.price %>
+          </li>
+        </div>
+
         <% end %>
       </ul>
 
