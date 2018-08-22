@@ -1,5 +1,6 @@
 class Business < ApplicationRecord
   has_many :foods, dependent: :destroy
+  has_many :orders, through: :foods
 
 
   geocoded_by :address

@@ -8,10 +8,10 @@
 require 'faker'
 
 User.destroy_all
-Customer.destroy_all
-Business.destroy_all
-Food.destroy_all
-Order.destroy_all
+# Customer.destroy_all
+# Business.destroy_all
+# Food.destroy_all
+# Order.destroy_all
 
 phone_numbers_customers = ["+972-00-0000000", "+972-11-1111111", "+972-22-2222222", "+972-33-3333333", "+972-44-4444444"]
 names_businesses = ["2C", "La Cucina", "Fish Market", "Rendez-Vous", "Kanki Sushi Bar"]
@@ -20,7 +20,7 @@ phone_numbers_businesses = ["03-00000000", "03-11111111", "03-22222222", "03-333
 dietary_categories = ["Vegan", "Vegetarian", "Bio", "Kosher", "Gluten Free" ]
 type_businesses = ["supermarket", "chinese", "japanese", "gastronomic", "italian", "mexican"]
 price_foods = [50, 80, 60, 35, 30]
-portion_foods = [1..10]
+portion_foods = (1..10).to_a
 foods_types = ["beef", "salads","chicken", "pasta", "pizza", "rice", "french fries"]
 
 user_params =  [
@@ -259,9 +259,14 @@ Business.create!(business_params)
 #     customer: Customer.all.sample,
 #     food: Food.all.sample
 #   )
-
-
  end
 
-
-
+100.times do |_|
+  order = Order.new
+  customer = Customer.all.sample
+  business = Business.all.sample
+  food = business.foods.sample
+  order.food = food
+  order.customer = customer
+  order.save!
+end

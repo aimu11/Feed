@@ -9,4 +9,10 @@ class BusinessesController < ApplicationController
       }
     end
   end
+
+  def dashboard
+    if current_user.customer
+      redirect_to dashboard_path
+    end
+  end
 end
