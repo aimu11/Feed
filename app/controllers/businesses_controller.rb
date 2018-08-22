@@ -11,7 +11,7 @@ class BusinessesController < ApplicationController
   end
 
   def dashboard
-    if current_user.customers
+    if current_user.customer
       redirect_to dashboard_path
     end
   end
