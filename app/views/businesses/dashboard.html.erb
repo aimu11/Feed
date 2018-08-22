@@ -8,20 +8,23 @@
 
 <% current_user.business.orders.each do |order| %>
   <div class="card-current-order">
-    <div id="order-number"><%= i = i + 1  %></div>
+    <div class="order-number"><%= i = i + 1  %></div>
     <div class="food-info">
-      <li>Food: <%= order.food.name %></li>
+      <div class="food-name"><li>Food: <%= order.food.name %></li></div>
       <li>Dietary Category: <%= order.food.dietary_category%></li>
     </div>
   <hr>
     <div class="pick-info">
-      <li id="portion"><%= order.food.portion %></li>
+      <div class="portions-and-number">
+        <li class="portion"><%= order.food.portion %></li>
+        <li>Portions</li>
+      </div>
       <li>Pickup Time: <%= order.food.pickup_start.strftime("%I:%M %p")  %> - <%= order.food.pickup_end.strftime("%I:%M %p") %></li>
     </div>
     <hr>
     <div class="cust-info">
-      <li >Made by <%= order.customer.first_name %> <%= order.customer.last_name %></li>
-      <li id= "price-style">$ <%= order.food.price %>.00</li>
+      <div class="made-by"><li >Made by <%= order.customer.first_name %> <%= order.customer.last_name %></li></div>
+      <li class= "price-style">$ <%= order.food.price %>.00</li>
     </div>
   </div>
 <% end %>
