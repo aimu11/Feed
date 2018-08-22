@@ -21,8 +21,8 @@ class CustomersController < ApplicationController
     @customer = current_user.customer
 
     if @customer.update(customer_params)
+      flash[:notice] = "Profile details updated"
     redirect_to dashboard_path
-
   else
     render :edit
   end
