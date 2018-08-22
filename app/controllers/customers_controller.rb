@@ -7,24 +7,31 @@ class CustomersController < ApplicationController
   end
 
   def dashboard
-    if current_user.businesses
-      redirect_to business_dashboard_path
-    end
+    @customer = current_user.customer
   end
 
   def new
   end
 
   def edit
+    @customer = current_user.customer
   end
 
   def update
+    @customer = current_user.customer
+
+    if @customer.update(customer_params)
+      flash[:notice] = "Profile details updated"
+    redirect_to dashboard_path
+  else
+    render :edit
+  end
   end
 
   private
 
   def find_customer
-    @customers = Customer.find(params[food_params])
+    @customers = Customer.find([:id])
   end
 
   def customer_params
