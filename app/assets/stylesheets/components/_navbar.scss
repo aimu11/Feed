@@ -10,9 +10,20 @@
   justify-content: space-between;
 }
 
+.navbar-home {
+  background: transparent;
+  box-shadow: none;
+  position: absolute;
+  width: 100%;
+  .navbar-wagon-link {
+    color: white;
+    font-weight: bold;
+  }
+}
+
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 40px;
 }
 
 /* User Avatar */
@@ -75,3 +86,17 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.navbar-wagon {
+  // [...]
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-wagon-white {
+  background-color: white;
+}
+
+
+
+
