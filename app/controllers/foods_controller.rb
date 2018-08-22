@@ -4,7 +4,6 @@ class FoodsController < ApplicationController
   end
 
   def show
-    find_foods
   end
 
   def new

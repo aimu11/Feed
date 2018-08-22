@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/orders", to: "orders#index"
   get "dashboard", to: "customers#dashboard", as: :dashboard
-  get "dashboard_business", to: "businesses#dashboard", as: :dashboard_business
+  get "business_dashboard", to: "businesses#dashboard", as: :business_dashboard
 
 
  resources :businesses, only: [:show, :new, :create, :edit, :update, :destroy]
