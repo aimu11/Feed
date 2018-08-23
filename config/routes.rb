@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/orders", to: "orders#index"
   get "dashboard", to: "customers#dashboard", as: :dashboard
   get "business_dashboard", to: "businesses#dashboard", as: :business_dashboard
+  #get "users/sign_out", to: "devise/sessions#destroy"
 
 
  resources :businesses, only: [:show, :new, :create, :edit, :update, :destroy]
