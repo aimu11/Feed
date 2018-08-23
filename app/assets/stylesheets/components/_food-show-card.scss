@@ -1,0 +1,166 @@
+.food-show-card {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #545454;
+  min-height: 686px;
+
+  box-shadow: 0px 0px 18px -5px #000;
+
+  padding: 18px;
+  background-color: #ffffff;
+
+  h3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #003C12;
+  }
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.food-picture {
+  width: 452px;
+  height: 281px;
+}
+
+.diet-icons {
+
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.food-name {
+  width: 60%;
+}
+
+.food-description {
+
+}
+
+.food-price {
+  font-family: "Nunito", sans-serif;
+  font-size: 34px;
+  color: #922B3E;
+  align-content: center;
+  width: 25%;
+  font-weight: 600;
+  padding-top: 5px;
+  .currency {
+    margin-right: 2px;
+  }
+  sup {
+    font-size: 18px;
+  }
+}
+
+.restaurant-details {
+
+}
+
+.restaurant-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #004C17;
+}
+
+.restaurant-address {
+
+}
+
+.order-details {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.portions-number {
+  display:flex;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+.pickup-time {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003C12;
+  }
+
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  width: 405px;
+  height: 66px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  background-color: #00A218;
+  color: #ffffff;
+  border-radius: 25px;
+   align-items: center;
+  margin: 0 auto;
+
+  h4 {
+    font-size: 24px;
+  }
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bolder;
+  background: #922B3E;
+    padding-top: 6px;
+    margin-right: 6px;
+  h5 {
+    color: #ffffff;
+    margin: 0 auto;
+    font-weight: bolder;
+
+  }
+}
+.food-card {
+    position: relative;
+    display: inline-block;
+}
+
+.food-card-content {
+  cursor: pointer;
+}
+
+.food-card .food-show-card {
+    visibility: hidden;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 150px;
+    top: 10px;
+}
+
+.food-card:hover .food-show-card {
+    visibility: visible;
+}

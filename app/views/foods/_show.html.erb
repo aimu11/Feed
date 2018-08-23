@@ -1,0 +1,40 @@
+<div class="food-show-card">
+  <div class="food-picture">
+    <%= image_tag "salad2" %>
+    <div class="diet-icons"></div>
+  </div>
+  <div class="item-details">
+    <div class="food-name">
+      <h3><%= food.name %></h3>
+      <div class="food-description">
+        <%= food.description %>
+      </div>
+    </div>
+    <div class="food-price">
+    $<%= food.price %>.<sup>06</sup>
+  </div>
+  </div>
+
+  <div class="restaurant-details">
+    <div class="restaurant-name">
+    <h3><%= food.business.name %></h3>
+    </div>
+    <div class="restaurant-address">
+      <%= food.business.address %>
+    </div>
+  </div>
+
+  <div class="order-details">
+    <div class="portions-number">
+      <div class="circle"><h5><%= food.portion %></h5></div>  Portions left
+    </div>
+    <div class="pickup-time">
+      <h5>Pick-up</h5>
+      before <%= food.pickup_end %>
+    </div>
+  </div>
+
+  <div class="order-button">
+    <h4> Order</h4>
+  </div>
+</div>
