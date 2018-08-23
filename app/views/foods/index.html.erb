@@ -4,8 +4,13 @@
 
 
       <% @foods.each do |food| %>
+
+      <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+
+      </button> -->
+
         <div class="col-xs-12">
-          <div class="food-card">
+          <div class="food-card" data-toggle="tooltip" data-placement="right">
             <div class="food-card-icon"></div>
             <div class="food-card-content">
               <div class="food-type">
@@ -13,9 +18,10 @@
                 <h4> <%= food.name %> </h4>
               </div>
               <div class="food-price">
-                <h4> <%= food.price%></h4>
+                <h4> <%= food.price %></h4>
               </div>
             </div>
+            <%= render "foods/show", food: food %>
           </div>
         </div>
 

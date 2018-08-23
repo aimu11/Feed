@@ -1,40 +1,40 @@
-<div class="food-show-card">
+<div class="food-show-card" role="tooltip">
   <div class="food-picture">
-    <%= image_tag "salad" %>
+    <%= image_tag "salad2" %>
     <div class="diet-icons"></div>
   </div>
   <div class="item-details">
     <div class="food-name">
-      <h3>Fettuccine Alfredo</h3>
+      <h3><%= food.name %></h3>
       <div class="food-description">
-        Lorem ipsum dolor sic amet cool description really tasty wow such tasty
+        <%= food.description %>
       </div>
     </div>
     <div class="food-price">
-    $4.<sup>06</sup>
-    </div>
+    $<%= food.price %>.<sup>06</sup>
+  </div>
   </div>
 
   <div class="restaurant-details">
     <div class="restaurant-name">
-    <h3>Ciro’s Restaurant</h3>
+    <h3><%= food.business.name %></h3>
     </div>
     <div class="restaurant-address">
-      Ben Yehuda 32, Tel Aviv
+      <%= food.business.address %>
     </div>
   </div>
 
   <div class="order-details">
     <div class="portions-number">
-      10 Portions left
+      <div class="circle"><h5><%= food.portion %></h5></div>  Portions left
     </div>
     <div class="pickup-time">
-      Pick-up
-      before 16:30
+      <h5>Pick-up</h5>
+      before <%= food.pickup_end %>
     </div>
   </div>
 
   <div class="order-button">
-    <h4>Order</h4>
+    <h4> Order</h4>
   </div>
 </div>
