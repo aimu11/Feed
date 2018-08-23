@@ -1,0 +1,43 @@
+.main-container {
+  display: flex;
+}
+#map {
+  flex: 0 0 950px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+
+
+.food-card {
+
+  padding: 10px;
+
+  .food-card-icon {
+
+  }
+
+  .food-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .food-type {
+    h4 {
+      font-size: 14px;
+      font-weight: regular;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .food-price {
+    font-size: 26px;
+    color: red;
+  }
+}
