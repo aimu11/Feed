@@ -1,6 +1,6 @@
 /* Main navbar */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0),0 0px 0 0 rgba(0,0,0,0);
   background: white;
   transition: all 0.3s ease;
   height: 70px;
@@ -49,11 +49,11 @@
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
-  font-size: 14px;
+  font-size: 16px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+  color: #7ADC7A;
+  text-decoration: overline;
 }
 
 /* Dropdown menu */
