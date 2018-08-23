@@ -2,8 +2,7 @@
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   color: #545454;
-  width: 487px;
-  height: 686px;
+  min-height: 686px;
 
   box-shadow: 0px 0px 18px -5px #000;
 
@@ -17,7 +16,13 @@
     color: #003C12;
   }
 }
-
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 .food-picture {
   width: 452px;
   height: 281px;
@@ -134,4 +139,28 @@
     font-weight: bolder;
 
   }
+}
+.food-card {
+    position: relative;
+    display: inline-block;
+}
+
+.food-card-content {
+  cursor: pointer;
+}
+
+.food-card .food-show-card {
+    visibility: hidden;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 150px;
+    top: 10px;
+}
+
+.food-card:hover .food-show-card {
+    visibility: visible;
 }

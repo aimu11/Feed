@@ -1,1 +1,1 @@
-$('[data-toggle="tooltip"]').tooltip()
+document.('[data-toggle="tooltip"').tooltip()
