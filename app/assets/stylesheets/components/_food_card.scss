@@ -10,6 +10,48 @@
   top: 0 !important;
 }
 
+.dietary-filters {
+  h3 {
+    font-size: 20px;
+    color: #391200;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+  }
+
+  .dietary-category {
+    border-radius: 5px;
+    border: 1px solid #7ADC7A;
+    height: 38px;
+    width: 119px;
+    margin: 5px;
+    font-size: 12px;
+    padding: 8px 14px 8px 8px;
+    font-size: 14px;
+    color: #545454;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    list-style: none;
+    display: inline;
+     li {
+      margin: 5px;
+    }
+     img {
+      height: 21px;
+      width: 18px;
+      margin: 4px 7px 4px 4px;
+    }
+     a:hover {
+      text-decoration: none;
+    }
+     .selected {
+      background-color: #DFF3DE;
+    }
+
+  }
+
+}
+
+
 .food-container {
   background-color: #ffffff;
     height: 100vh;
