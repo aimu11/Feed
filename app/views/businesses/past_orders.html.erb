@@ -1,20 +1,17 @@
-<h1>Current Orders</h1>
-
+<h1>Past orders</h1>
 
 <% i = 0 %>
 
 
-
-
 <% current_user.business.orders.each do |order| %>
-  <% if order.created_at.today? == true %>
+  <% if order.created_at.today? == false %>
     <div class="card-current-order">
       <div class="order-number"><%= i = i + 1  %></div>
       <div class="food-info">
         <div class="food-name"><li>Food: <%= order.food.name %></li></div>
         <li>Dietary Category: <%= order.food.dietary_category%></li>
       </div>
-      <hr>
+    <hr>
       <div class="pick-info">
         <div class="portions-and-number">
           <li class="portion"><%= order.food.portion %></li>
@@ -30,6 +27,3 @@
     </div>
   <% end %>
 <% end %>
-
-
-
