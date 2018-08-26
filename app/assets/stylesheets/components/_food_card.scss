@@ -1,13 +1,25 @@
 .main-container {
   display: flex;
-  height: 100vh;
+  max-width: 100%;
 }
 
 #map {
+  height: 100%;
+  width: 100%;
+}
+
+#map-container {
   flex: 0 0 950px;
   height: 100vh;
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+  position: sticky !important ;
+  top: 0;
+}
+
+
+.food-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
 }
 
 .dietary-filters {
@@ -51,19 +63,11 @@
 
 }
 
-
-.food-container {
-  background-color: #ffffff;
-    height: 100vh;
-    position:relative ;
-}
-
 .food-card {
   background-color: #ffffff;
   width: 445px;
-  padding: 10px;
-position: relative;
-margin: auto 0;
+  position: relative;
+  margin: auto 0;
 
   .food-card-content {
     display: flex;
