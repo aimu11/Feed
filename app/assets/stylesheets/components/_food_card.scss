@@ -29,15 +29,13 @@
     font-family: "Nunito", sans-serif;
     font-weight: 700;
   }
-
+}
 
 .wrapper-card {
   background-color: #ffffff;
 }
 
-.food-card {
-  padding: 10px;
-  
+
   .dietary-category {
     border-radius: 5px;
     border: 1px solid #7ADC7A;
@@ -69,8 +67,6 @@
 
   }
 
-}
-
 .food-card {
   background-color: #ffffff;
   width: 445px;
@@ -87,6 +83,7 @@
 
   .food-type {
     width: 75%;
+  }
 
   .food-item {
     h4 {
@@ -111,6 +108,6 @@
     font-weight: bold;
   }
   }
-
-
 }
+
+
