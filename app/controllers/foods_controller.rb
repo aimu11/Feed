@@ -54,7 +54,7 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :description, :price, :portion, :order_before, :pickup_start, :pickup, :end, :dietary_category, :business_id)
+    params.require(:food).permit(:name, :description, :price, :portion, :order_before, :pickup_start, :pickup, :end, :dietary_category, :business_id, :photo)
   end
 
 
