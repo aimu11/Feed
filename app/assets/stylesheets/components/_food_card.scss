@@ -9,8 +9,12 @@
 }
 
 
-.food-card {
 
+.wrapper-card {
+  background-color: #ffffff;
+}
+
+.food-card {
   padding: 10px;
 
   .food-card-icon {
@@ -25,6 +29,7 @@
   }
 
   .food-type {
+    width: 75%;
     h4 {
       font-size: 14px;
       font-weight: regular;
@@ -39,5 +44,7 @@
   .food-price {
     font-size: 26px;
     color: red;
+    margin-left: 50px;
+
   }
 }
