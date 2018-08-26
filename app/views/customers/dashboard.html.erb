@@ -13,36 +13,14 @@
 
       <div id="tab1">
         <section id="first-tab-group" class="tabgroup">
-          <div class="orders-container">
 
-            <h3>Your current orders</h3>
+          <%= render "current_orders" %>
 
-            <ul class="list-group">
-              <% current_user.customer.orders.each do |order| %>
-                <li class="list-group-item">
-                  <b><%= order.food.name %></b>
-                  from
-                  <%= order.food.business.name %>
-                  at
-                  <%= order.food.business.address %>
-                  to pickup by
-                  <%= order.food.pickup_end.strftime("%I:%M %p") %>
-                  tonight
-                </li>
-              <% end %>
-            </ul>
-
-          </div>
-        </div>
       </section>
     </div>
 
 
-    <div class="profile-edit-container">
-      <h3>Your Profile details</h3>
-      <%= render "edit" %>
-
-    </div>
+    <%= render "edit" %>
 
   </div>
 </div>
