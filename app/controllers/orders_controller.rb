@@ -19,12 +19,13 @@ class OrdersController < ApplicationController
    # end
 
    food = Food.find(params[:food_id])
+   customer = current_user.customer
    order = Order.create!(
     customer: current_user.customer,
     food: food,
     state: 'pending',
     food_sku: food.sku,
-    price: food.price
+    price: food.price_cents
     )
 
    redirect_to new_order_payment_path(order)

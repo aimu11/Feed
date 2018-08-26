@@ -14,7 +14,7 @@ class PaymentsController < ApplicationController
       customer:     customer.id,   # You should store this customer id and re-use it.
       price:       @order.price_cents,
       description:  "Payment for food #{@order.food_sku} for order #{@order.id}",
-      currency:     @order.price.currency
+      currency:     @order.price_cents.currency
     )
 
     @order.update(payment: charge.to_json, state: 'paid')
