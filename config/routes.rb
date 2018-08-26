@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :customers, only: [:index, :show, :new, :create, :edit, :update]
 
+  post "orders/:id/create"    => "orders#create"
+
   get "/orders", to: "orders#index"
   get "dashboard", to: "customers#dashboard", as: :dashboard
   get "business_dashboard", to: "businesses#dashboard", as: :business_dashboard
