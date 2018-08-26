@@ -1,63 +1,63 @@
-.card-current-order {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 30px;
-  li {
-    list-style: none;
-  }
-  background-color: white;
-  box-shadow: 2px 4px 5px lightgrey;
-}
+// .card-current-order {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 10px 30px;
+//   li {
+//     list-style: none;
+//   }
+//   background-color: white;
+//   box-shadow: 2px 4px 5px lightgrey;
+// }
 
 
-hr {
-  border-left: 1px solid #E0E0E0;
-  height: 70px;
-}
+// hr {
+//   border-left: 1px solid #E0E0E0;
+//   height: 70px;
+// }
 
-.food-info, .cust-info, .pick-info {
-  flex: 1 0;
-  margin-left: 40px;
-  margin-right: 40px;
-}
+// .food-info, .cust-info, .pick-info {
+//   flex: 1 0;
+//   margin-left: 40px;
+//   margin-right: 40px;
+// }
 
-.order-number {
-  margin-left: 40px;
-  font-weight: bold;
-}
+// .order-number {
+//   margin-left: 40px;
+//   font-weight: bold;
+// }
 
-.price-style {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  color: #922B3E;
-}
+// .price-style {
+//   font-family: 'Nunito', sans-serif;
+//   font-weight: 900;
+//   font-size: 20px;
+//   color: #922B3E;
+// }
 
-.portion {
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  padding: 13px 10px;
-  background-color: #922B3E;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-
-.portions-and-number {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+// .portion {
+//   border-radius: 100%;
+//   width: 50px;
+//   height: 50px;
+//   padding: 13px 10px;
+//   background-color: #922B3E;
+//   text-align: center;
+//   color: white;
+//   font-weight: bold;
+//   margin-right: 10px;
+// }
 
 
-.food-name {
-  margin-bottom: 10px;
-}
+// .portions-and-number {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 10px;
+// }
 
-.made-by {
-  margin-bottom: 10px;
-}
+
+// .food-name {
+//   margin-bottom: 10px;
+// }
+
+// .made-by {
+//   margin-bottom: 10px;
+// }
