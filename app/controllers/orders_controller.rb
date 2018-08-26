@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     food: food,
     state: 'pending',
     food_sku: food.sku,
-    price: food.price_cents
+    price: food.price
     )
 
    redirect_to new_order_payment_path(order)
