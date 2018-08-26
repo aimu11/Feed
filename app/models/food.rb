@@ -4,11 +4,4 @@ class Food < ApplicationRecord
   validates :sku, presence: true, uniqueness: true
 
   monetize :price_cents
-  
-geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
-
-  belongs_to :user
-
-
 end
