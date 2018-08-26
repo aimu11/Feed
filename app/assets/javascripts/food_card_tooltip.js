@@ -1,1 +1,1 @@
-document.('[data-toggle="tooltip"').tooltip()
+// document.querySelector('[data-toggle="tooltip"').tooltip()
