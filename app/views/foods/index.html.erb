@@ -29,7 +29,7 @@
               </div>
 
               <div class="food-price">
-                <h4>$ <%= food.price %></h4>
+                <h4><%= humanized_money_with_symbol(food.price)%></h4>
               </div>
 
             </div>
