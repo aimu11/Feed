@@ -19,6 +19,7 @@ class OrdersController < ApplicationController
    # end
 
    food = Food.find(params[:food_id])
+   customer = current_user.customer
    order = Order.create!(
     customer: current_user.customer,
     food: food,
