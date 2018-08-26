@@ -12,3 +12,4 @@ geocoded_by :address
   mount_uploader :photo, PhotoUploader
 
 end
+  
