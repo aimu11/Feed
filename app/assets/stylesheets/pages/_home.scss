@@ -1,1 +1,38 @@
-// Specific CSS for your home-page
+.footer{
+        clear:both;
+        height: 300px;
+        width: 100%;
+        text-align: center;
+        font-family: nunito;
+      }
+
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+}
+h1 {
+  margin: 0 0 20px 0;
+}
+p {
+  margin: 0 0 20px 0;
+}
+
+.footer {
+  background: white;
+  color: black;
+  padding: 20px;
+}
+
+
+.flex-services {
+  display: flex;
+  justify-content: space-between;
+}

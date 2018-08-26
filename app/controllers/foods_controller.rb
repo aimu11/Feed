@@ -3,8 +3,17 @@ class FoodsController < ApplicationController
 
 
 
+
   def index
     @foods = Food.all
+    #@foods = Food.where.not(latitude: nil, longitude: nil)
+
+    @markers = @foods.map do |food|
+      {
+        lat: food.business.latitude,
+        lng: food.business.longitude,
+      }
+    end
   end
 
   def show

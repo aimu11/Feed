@@ -1,13 +1,25 @@
 .main-container {
   display: flex;
-  height: 100vh;
+  max-width: 100%;
 }
 
 #map {
+  height: 100%;
+  width: 100%;
+}
+
+#map-container {
   flex: 0 0 950px;
   height: 100vh;
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+  position: sticky !important ;
+  top: 0;
+}
+
+
+.food-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
 }
 
 .dietary-filters {
@@ -17,6 +29,12 @@
     font-family: "Nunito", sans-serif;
     font-weight: 700;
   }
+}
+
+.wrapper-card {
+  background-color: #ffffff;
+}
+
 
   .dietary-category {
     border-radius: 5px;
@@ -49,21 +67,11 @@
 
   }
 
-}
-
-
-.food-container {
-  background-color: #ffffff;
-    height: 100vh;
-    position:relative ;
-}
-
 .food-card {
   background-color: #ffffff;
   width: 445px;
-  padding: 10px;
-position: relative;
-margin: auto 0;
+  position: relative;
+  margin: auto 0;
 
   .food-card-content {
     display: flex;
@@ -73,6 +81,9 @@ margin: auto 0;
   padding-bottom: 10px;
   }
 
+  .food-type {
+    width: 75%;
+  }
 
   .food-item {
     h4 {
@@ -87,12 +98,16 @@ margin: auto 0;
   }
 
   .food-price {
+    font-size: 26px;
+    color: red;
+    margin-left: 50px;
+
     h4 {
     font-size: 24px;
     color: #922B3E;
     font-weight: bold;
   }
   }
-
-
 }
+
+
