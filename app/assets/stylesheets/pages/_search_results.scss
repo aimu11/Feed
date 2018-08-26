@@ -1,14 +1,68 @@
+.results-wrapper {
+  margin-left: 0;
+  position:relative;
+  width: 40%;
+  margin-top: 1px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.results-column {
+  font-family: "Nunito", sans-serif;
+  margin-left: 10px;
+
+  h2 {
+font-size: 20px;
+font-weight: bold;
+  }
+}
+
 .dietary-category {
   border-radius: 5px;
   border: 1px solid #7ADC7A;
   height: 38px;
   width: 119px;
   margin: 5px;
-  padding: 5px;
-  font-size: 12px;
+  padding: 8px 14px 8px 8px;
+  font-size: 14px;
   color: #545454;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   list-style: none;
   display: inline;
+
+  li {
+    margin: 5px;
+  }
+
+  img {
+    height: 21px;
+    width: 18px;
+    margin: 4px 7px 4px 4px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .selected {
+    background-color: #F3FFF2;
+  }
+}
+
+.food-card {
+  padding: 15px;
+  border: 1px solid #D9D9D9;
+    list-style: none;
+    img {
+      height: 20px;
+      width: 16px;
+      // margin: 4px 7px 4px 4px;
+    }
+    .food-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .restaurant-name {
+    font-size: 12px;
+  }
 }
