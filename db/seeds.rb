@@ -15,7 +15,7 @@ User.destroy_all
 
 phone_numbers_customers = ["+972-00-0000000", "+972-11-1111111", "+972-22-2222222", "+972-33-3333333", "+972-44-4444444"]
 names_businesses = ["2C", "La Cucina", "Fish Market", "Rendez-Vous", "Kanki Sushi Bar"]
-addresses_businesses = ["102 Menachem Begin", "31 Bograshov", "33 Shaoul Amelech", "1 Lillinblum", "23 Bograshov"]
+  addresses_businesses = ["102 Menachem Begin", "31 Bograshov", "33 Shaoul Amelech", "1 Lillinblum", "23 Bograshov"]
 phone_numbers_businesses = ["03-00000000", "03-11111111", "03-22222222", "03-33333333", "03-44444444"]
 dietary_categories = ["Vegan", "Vegetarian", "Bio", "Kosher", "Gluten Free" ]
 type_businesses = ["supermarket", "chinese", "japanese", "gastronomic", "italian", "mexican"]
@@ -239,6 +239,8 @@ business_params = [
 
 Business.create!(business_params)
 
+tlv_businesses = Business.all
+
  15.times do
 
 
@@ -253,7 +255,7 @@ Business.create!(business_params)
      order_before: DateTime.new(2018,2,3,6),
      pickup_start: DateTime.new(2018,2,3,9,30),
      pickup_end: DateTime.new(2018,2,3,11,30),
-     business: Business.all.sample
+     business: tlv_businesses.sample
    )
 
 #   Order.create!(
@@ -262,7 +264,7 @@ Business.create!(business_params)
 #   )
  end
 
-100.times do |_|
+30.times do
   order = Order.new
   customer = Customer.all.sample
   business = Business.all.sample
