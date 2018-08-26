@@ -30,6 +30,14 @@
     font-weight: 700;
   }
 
+
+.wrapper-card {
+  background-color: #ffffff;
+}
+
+.food-card {
+  padding: 10px;
+  
   .dietary-category {
     border-radius: 5px;
     border: 1px solid #7ADC7A;
@@ -77,6 +85,8 @@
   padding-bottom: 10px;
   }
 
+  .food-type {
+    width: 75%;
 
   .food-item {
     h4 {
@@ -91,6 +101,10 @@
   }
 
   .food-price {
+    font-size: 26px;
+    color: red;
+    margin-left: 50px;
+
     h4 {
     font-size: 24px;
     color: #922B3E;
