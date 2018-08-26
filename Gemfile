@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'geocoder'
 gem 'jquery-rails'
 
+gem 'money-rails'
+gem 'stripe'
 
 gem 'faker'
 
