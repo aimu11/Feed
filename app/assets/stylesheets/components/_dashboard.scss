@@ -1,10 +1,11 @@
 #box {
   display: flex;
-  // align-items: center;
+  //align-items: center;
   justify-content: center;
   padding: 20px;
   margin-top: 30px;
   font-size: 14px;
+  font-family: nunito;
 }
 
 .dashboard-container {
@@ -43,7 +44,7 @@
   margin:100px auto;
   width:80%;
   font-family:sans-serif;
-  color:#000000;
+  color:black;
   font-size:14px;
   line-height:24px;
   max-width:600px;
@@ -64,13 +65,13 @@
     position:relative;
     text-transform:uppercase;
     color:#fff;
-    height:70px;
+    height:60px;
     line-height:90px;
-    background:linear-gradient(165deg, transparent 29%, blue 30%);
+    background:linear-gradient(165deg, transparent 29%, #922B3E 30%);
 //
     &:hover, &.active {
-       background: linear-gradient(165deg,transparent 29%, #F2EEE2 30%);
-       color:#98927C;
+       background: linear-gradient(165deg,transparent 29%, #922B3E 30%);
+       color:white;
     }
 //
 //     &:before{

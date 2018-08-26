@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.string "business_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
