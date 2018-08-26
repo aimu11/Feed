@@ -8,14 +8,14 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    @order.customer = current_user
-    @order.food = Food.find(params[:id])
+    food = Food.find(params[:food_id])
+
+    @order  = Order.create!(food: food, customer: current_user.customer)
 
     if @order.save
-     redirect_to order_path
+     redirect_to dashboard_path
    else
-     redirect_to current_user_path
+     redirect_to foods_path
    end
   end
 
