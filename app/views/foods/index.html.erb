@@ -1,47 +1,52 @@
-<div class="results-wrapper">
-  <div class="results-column">
+
+    
+<div class="main-container">
+
+  <div class="food-container col-xs-4">
+
     <div class="dietary-filters">
-      <h2>Dietary</h2>
-<br>
-      <a><li class="dietary-category"><%= image_tag "foods/category_icons/vegan" %> Vegan</li></a>
-      <li class="dietary-category"><%= image_tag "foods/category_icons/pescatarian" %> Mochachino</li>
-      <li class="dietary-category"><%= image_tag "foods/category_icons/lactose-free" %> Lactose-free</li>
-      <li class="dietary-category"><%= image_tag "foods/category_icons/vegetarian" %> Vegetarian</li>
-      <li class="dietary-category selected"><%= image_tag "foods/category_icons/pescatarian" %> Pescatarian</li>
-      <li class="dietary-category"><%= image_tag "foods/category_icons/meat" %> Meat</li>
-      <li class="dietary-category"><%= image_tag "foods/category_icons/dairy" %> Dairy</li>
+          <h3>Dietary</h2>
+
+          <a><li class="dietary-category"><%= image_tag "carrot_icon" %> Vegan</li></a>
+          <li class="dietary-category"><%= image_tag "pescatarian" %> Mochachino</li>
+          <li class="dietary-category"><%= image_tag "lactose-free" %> Lactose-free</li>
+          <li class="dietary-category"><%= image_tag "vegetarian" %> Vegetarian</li>
+          <li class="dietary-category selected"><%= image_tag "pescatarian" %> Pescatarian</li>
+          <li class="dietary-category"><%= image_tag "burger_icon" %> Meat</li>
+          <li class="dietary-category"><%= image_tag "dairy" %> Dairy</li>
     </div>
 
-    <div class="food-filter">
-      <h2>Food filters</h2>
-      <%= simple_form_for "Foodtypes" do |f| %>
-        <%= f.input :food_type, input_html: { multiple: true } %>
-      <% end %>
-    </div>
 
-    <div class="food-items">
-      <ul>
-        <% @foods.each do |food| %>
-        <div class="food-card">
-          <li>
-            <%= image_tag "foods/category_icons/meat" %> <%= image_tag "foods/category_icons/vegan" %> <br>
-            <div class="food-name">
-              <%= food.name %>
+
+      <% @foods.each do |food| %>
+        <div class="col-xs-12 wrapper-card">
+          <%#= link_to '', '#', class: 'card-link', data: { toggle: 'tooltip', placement: 'right', html: true } %>
+          <div class="food-card" data-toggle="tooltip" data-placement="right">
+
+            <div class="food-card-content">
+
+              <div class="food-item">
+                <p><%= image_tag "burger_icon", size: "20x16" %> <%= image_tag "carrot_icon", size: "20x16" %></p>
+              <h4> <%= food.name %> </h4>
+              <h5><%= food.business.name %></h5>
+              </div>
+
+              <div class="food-price">
+                <h4>$ <%= food.price %></h4>
+              </div>
+
             </div>
-          <div class="restaurant_name">
-            <%= food.business.name %>
+            <%= render "foods/show", food: food %>
           </div>
-            <%= food.price %>
-          </li>
+
         </div>
 
-        <% end %>
-      </ul>
-
-    </div>
-
+      <% end %>
   </div>
 
-  <div class="results-map">
-  </div>
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
+
 </div>
+
+<!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+</button> -->

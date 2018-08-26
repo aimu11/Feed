@@ -8,6 +8,8 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'applvication', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <link rel="shortcut icon" type="image/png" href="https://image.ibb.co/dq9Uhe/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Nunito:900,400,800">
   </head>
   <body>
     <%= render 'shared/navbar' %>
@@ -18,6 +20,7 @@
 
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag "map" %>
-    
+    <%= javascript_pack_tag "navbar" %>
+    <%= yield(:after_js) %>
   </body>
 </html>
