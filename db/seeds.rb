@@ -247,7 +247,7 @@ Business.create!(business_params)
      description: Faker::Food.description,
      price: price_foods.sample,
      portion: portion_foods.sample,
-     sku: Faker::Food.ingredient
+     sku: Faker::Food.ingredient,
      dietary_category: dietary_categories.sample,
      food_type: foods_types.sample,
      order_before: DateTime.new(2018,2,3,6),
