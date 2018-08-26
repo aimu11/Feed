@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_one :business, dependent: :destroy
   has_one :customer, dependent: :destroy
+
 end
