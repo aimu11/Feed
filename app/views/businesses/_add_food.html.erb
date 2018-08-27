@@ -1,0 +1,23 @@
+<%= simple_form_for Food.new, url: {action: "create"}, html: {class: ""} do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.number_field(:portion, in: 1.0..20.0, step: 1) %>
+  <%= f.text_field :dietary_category %>
+  <%= f.text_field :food_type %>
+
+  <%= f.time_field(:order_before) %>
+  <%= f.time_field(:pickup_start) %>
+  <%= f.time_field(:pickup_end) %>
+
+  <%= f.text_field :sku %>
+
+  <%= f.number_field(:price_cents, in: 1.0..20.0, step: 0.5) %>
+
+
+
+  <%= f.submit "Add new item" %>
+<% end %>

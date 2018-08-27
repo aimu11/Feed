@@ -1,10 +1,15 @@
 
-
-<div class="main-container">
-  <h1>Current Orders</h1>
-
-  <div class="main-content">
-    <%= render 'current_orders' %>
-    <%= render 'profile' %>
+<div class="dashboard-container">
+  <div class="dashboard-nav">
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#">Current Orders</a></li>
+      <li><a href="#">Past Orders</a></li>
+      <li><a href="#">Inventory</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
   </div>
+
+    <!-- <%= render "current_orders" %> -->
+
 </div>
+<%= render "food_inventory" %>
