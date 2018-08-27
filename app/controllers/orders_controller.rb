@@ -8,27 +8,20 @@ class OrdersController < ApplicationController
   end
 
   def create
-   #  food = Food.find(params[:food_id])
+    cart = current_user.customer.cart
+    customer = current_user.customer
+    cart.cart_details.map(&:food).each do |food|
+      order = Order.create!(
+        customer: customer,
+        food: food,
+        state: 'pending',
+        food_sku: food.sku,
+        price: food.price,
+        cart: cart
+      )
+    end
 
-   #  @order  = Order.create!(food: food, customer: current_user.customer)
-
-   #  if @order.save
-   #   redirect_to dashboard_path
-   # else
-   #   redirect_to foods_path
-   # end
-
-   food = Food.find(params[:food_id])
-   customer = current_user.customer
-   order = Order.create!(
-    customer: current_user.customer,
-    food: food,
-    state: 'pending',
-    food_sku: food.sku,
-    price: food.price
-    )
-
-   redirect_to new_order_payment_path(order)
+    redirect_to new_cart_payment_path(cart)
   end
 
   # def show

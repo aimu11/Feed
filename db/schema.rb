@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_26_131359) do
+ActiveRecord::Schema.define(version: 2018_08_27_100534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,24 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_businesses_on_user_id"
+  end
+
+  create_table "cart_details", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "food_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_cart_details_on_cart_id"
+    t.index ["food_id"], name: "index_cart_details_on_food_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "number_of_element"
+    t.bigint "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_carts_on_customer_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -78,6 +96,8 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.string "food_sku"
     t.integer "price_cents", default: 0, null: false
     t.json "payment"
+    t.bigint "cart_id"
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["food_id"], name: "index_orders_on_food_id"
   end
@@ -95,8 +115,12 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
   end
 
   add_foreign_key "businesses", "users"
+  add_foreign_key "cart_details", "carts"
+  add_foreign_key "cart_details", "foods"
+  add_foreign_key "carts", "customers"
   add_foreign_key "customers", "users"
   add_foreign_key "foods", "businesses"
+  add_foreign_key "orders", "carts"
   add_foreign_key "orders", "customers"
   add_foreign_key "orders", "foods"
 end
