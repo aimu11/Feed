@@ -1,10 +1,16 @@
 class Food < ApplicationRecord
   belongs_to :business
   has_many :orders, dependent: :destroy
+  validates :sku, presence: true, uniqueness: true
 
-geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  monetize :price_cents
 
-  belongs_to :user
+  # geocoded_by :address
+  # after_validation :geocode, if: :will_save_change_to_address?
+
+
+  mount_uploader :photo, PhotoUploader
+
 
 end
+

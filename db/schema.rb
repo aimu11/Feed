@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_130703) do
+ActiveRecord::Schema.define(version: 2018_08_26_131359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 2018_08_20_130703) do
     t.string "business_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2018_08_20_130703) do
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "price"
     t.integer "portion"
     t.string "dietary_category"
     t.string "food_type"
@@ -54,6 +53,9 @@ ActiveRecord::Schema.define(version: 2018_08_20_130703) do
     t.datetime "order_before"
     t.datetime "pickup_start"
     t.datetime "pickup_end"
+    t.string "sku"
+    t.integer "price_cents", default: 0, null: false
+    t.string "photo"
     t.index ["business_id"], name: "index_foods_on_business_id"
   end
 
@@ -62,6 +64,10 @@ ActiveRecord::Schema.define(version: 2018_08_20_130703) do
     t.bigint "food_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
+    t.string "food_sku"
+    t.integer "price_cents", default: 0, null: false
+    t.json "payment"
     t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["food_id"], name: "index_orders_on_food_id"
   end

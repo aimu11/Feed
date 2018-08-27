@@ -19,6 +19,11 @@ gem 'webpacker'
 gem 'geocoder'
 gem 'jquery-rails'
 
+gem 'money-rails'
+gem 'stripe'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 gem 'faker'
 
