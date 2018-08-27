@@ -1,7 +1,7 @@
 class Food < ApplicationRecord
   belongs_to :business
   has_many :orders, dependent: :destroy
-  validates :sku, presence: true, uniqueness: true
+  validates :sku, presence: true
 
   monetize :price_cents
 
@@ -13,4 +13,3 @@ class Food < ApplicationRecord
 
 
 end
-
