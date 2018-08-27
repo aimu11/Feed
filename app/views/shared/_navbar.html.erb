@@ -17,11 +17,17 @@
       <%= link_to "Eat", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sell", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Download the app", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+       <% if !current_user.customer.nil? %>
+        <%= link_to cart_path(current_user.customer.cart) do %>
+          <%= image_tag 'shopping-cart-red.png', class: "avatar" %>
+        <% end %>
+        <%= current_user.customer.cart.cart_details.size %>
+      <% end %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "shopping-cart-white.png", class: "avatar dropdown-toggle shopping-cart-white", "data-toggle" => "dropdown" %>
+          <%= image_tag "avatar-icon.png", class: "avatar dropdown-toggle shopping-cart-white", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to dashboard_path(@user) do %>

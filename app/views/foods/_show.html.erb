@@ -41,10 +41,12 @@
   </div>
 
 
-    <%= form_tag food_orders_path(food) do %>
-      <%= hidden_field_tag 'food', food.id %>
-      <%= submit_tag 'Order', class: 'order-button order-btn' %>
-    <% end %>
+<%= link_to 'Add to Cart', food_cart_details_path(food), class: 'order-button order-btn', method: :post  %>
+
+    <%#= form_tag food_cart_details_path(food) do %>
+      <%#= hidden_field_tag 'food', food.id %>
+      <%#= submit_tag 'Add to Cart', class: 'order-button order-btn' %>
+    <%# end %>
 
 
 </div>

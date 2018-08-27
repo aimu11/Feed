@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+Order.destroy_all
 
+Cart.destroy_all
+Food.destroy_all
+
+Customer.destroy_all
+Business.destroy_all
 User.destroy_all
-# Customer.destroy_all
-# Business.destroy_all
-# Food.destroy_all
-# Order.destroy_all
 
 phone_numbers_customers = ["+972-00-0000000", "+972-11-1111111", "+972-22-2222222", "+972-33-3333333", "+972-44-4444444"]
 names_businesses = ["2C", "La Cucina", "Fish Market", "Rendez-Vous", "Kanki Sushi Bar"]
@@ -271,7 +273,19 @@ tlv_businesses = Business.all
   customer = Customer.all.sample
   business = Business.all.sample
   food = business.foods.sample
-  order.food = food
-  order.customer = customer
-  order.save!
+  if food
+    order.food = food
+    order.customer = customer
+    order.save!
+  end
 end
+
+customer = Customer.first
+food = Food.last
+
+customer.cart.cart_details << CartDetail.new(food: food)
+customer.save!
+
+# customer.cart.cart_details.map(&:food) # gets all the foods in the cart
+
+

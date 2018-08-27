@@ -1,6 +1,7 @@
 class Food < ApplicationRecord
   belongs_to :business
   has_many :orders, dependent: :destroy
+  has_many :cart_details
   validates :sku, presence: true
 
   monetize :price_cents
