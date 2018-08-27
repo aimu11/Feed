@@ -264,7 +264,9 @@ tlv_businesses = Business.all
 #   )
  end
 
-30.times do
+
+30.times do |_|
+
   order = Order.new
   customer = Customer.all.sample
   business = Business.all.sample
