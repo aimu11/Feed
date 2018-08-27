@@ -1,0 +1,59 @@
+
+<div class="food-inventory-container">
+  <div class="container">
+    <div class="owl-carousel">
+      <div class="scrollmenu">
+
+        <% current_user.business.foods.each do |food| %>
+
+          <div class="carousel-item">
+            <div class="food-card">
+            <div class="food-img"><%= image_tag "rainbow" %></div>
+            <div class="food-details">
+              <h2><%= food.name %></h2>
+              <div class="food-description">
+                <%= food.description %>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="portions-number">
+              <div class="circle">
+                  <h5><%= food.portion %></h5>
+              </div>  Portions left
+            </div>
+
+            <hr>
+
+            <div class="order-info">
+              <h3>Order Before:</h3>
+              <%= food.pickup_end.strftime("%I:%M %p") %>
+            </div>
+
+            <hr>
+
+            <div class="pickup-time">
+              <h3>Pick-up</h3>
+              From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
+            </div>
+
+            <%= link_to "Edit", edit_food_path(food) %>
+
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<div class="add-food-form-container">
+  <%= render "foods/add_food" %>
+</div>
