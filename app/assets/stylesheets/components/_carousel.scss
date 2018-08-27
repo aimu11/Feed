@@ -12,7 +12,6 @@
 
 @mixin carousel($items, $animation: 'default') {
   .carousel {
-    width: 75%;
     position: relative;
     overflow: hidden;
 

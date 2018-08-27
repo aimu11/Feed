@@ -1,6 +1,6 @@
 <!-- <div class="col-xs-12"> -->
 
-  <div class="food-inventory-container col-xs-8" style="margin: 0 auto">
+  <div class="food-inventory-container" style="margin: 0 auto">
     <div class="container">
   	<div class="carousel">
   		<input type="radio" id="carousel-1" name="carousel[]" checked>
@@ -10,78 +10,61 @@
   		<input type="radio" id="carousel-5" name="carousel[]">
 
 
+
+
+
+
+
+
   		<ul class="carousel__items">
+        <li class="carousel__item">
+
+        <% current_user.business.foods.each do |food| %>
+
+
   			<li class="carousel__item">
+          <div class="add-food-form-container">
+            <%#= render "add_food" %>
+          </div>
+
 
           <div class="inventory">
 
-
             <div class="food-card">
               <div class="food-img"><%= image_tag "rainbow" %></div>
+
               <div class="food-details">
-                <h2>Yakazame</h2>
-                Lorem ipsum dolor sic amet cool description really tasty wow such tasty
+                <h2>  <%= food.name %></h4>
+                <div class="food-description">
+                  <%= food.description %>
+                </div>
               </div>
+
               <hr>
-              <div class="food-portions">
-                10 Portions left
+
+              <div class="portions-number">
+                <div class="circle"><h5><%= food.portion %></h5></div>  Portions left
               </div>
+
               <hr>
+
               <div class="order-info">
-                Order Before
+                <h3>Order Before:</h3>
+                <%= food.pickup_end.strftime("%I:%M %p") %>
               </div>
-              <hr>
-              <div class="food-price">
-                Pick-up
-              </div>
-              <hr>
-              <div class="edit-btn"></div>
-            </div>
 
+              <hr>
 
-            <div class="food-card">
-              <div class="food-img"><%= image_tag "rainbow" %></div>
-              <div class="food-details">
-                <h2>Yakazame</h2>
-                Lorem ipsum dolor sic amet cool description really tasty wow such tasty
+              <div class="pickup-time">
+                <h3>Pick-up</h3>
+                From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
               </div>
-              <hr>
-              <div class="food-portions">
-                10 Portions left
-              </div>
-              <hr>
-              <div class="order-info">
-                Order Before
-              </div>
-              <hr>
-              <div class="food-price">
-                Pick-up
-              </div>
-              <hr>
-              <div class="edit-btn"></div>
-            </div>
 
+              <%= form_tag edit_food_path(food) do %>
+                <%= hidden_field_tag 'food', food.id %>
+                <%= submit_tag 'Edit', class: 'edit-btn' %>
+              <% end %>
 
-            <div class="food-card">
-              <div class="food-img"><%= image_tag "rainbow" %></div>
-              <div class="food-details">
-                <h2>Yakazame</h2>
-                Lorem ipsum dolor sic amet cool description really tasty wow such tasty
-              </div>
-              <hr>
-              <div class="food-portions">
-                10 Portions left
-              </div>
-              <hr>
-              <div class="order-info">
-                Order Before
-              </div>
-              <hr>
-              <div class="food-price">
-                Pick-up
-              </div>
-              <hr>
-              <div class="edit-btn"></div>
             </div>
 
           </div>
@@ -90,14 +73,8 @@
 
 
         </li>
+        <% end %>
 
-
-
-
-  			<li class="carousel__item">item 2</li>
-  			<li class="carousel__item">item 3</li>
-  			<li class="carousel__item">item 4</li>
-  			<li class="carousel__item">item 5</li>
   		</ul>
 
 
@@ -126,8 +103,9 @@
    </div>
   </div>
 
-  <div class="add-food-form-container col-xs-3">
+  <div class="add-food-form-container">
 
+    <%= render "add_food" %>
   </div>
 
 <!-- </div> -->
