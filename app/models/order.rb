@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :customer
   belongs_to :food
+  belongs_to :cart, optional: true
 
   monetize :price_cents
 end
@@ -13,7 +14,7 @@ end
 # class User
 # has_many :cart_items
 
-# class CartItemsController
+# class CartsController
 #
 #   def show
 #     @cart_items = current_user.cart_items

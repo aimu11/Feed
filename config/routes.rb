@@ -21,6 +21,12 @@ end
 
   resources :foods, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :orders, only: [ :create, :index]
+      resources :cart_details, only: [:create]
   end
+
+  resources :carts, only: [:show]
+
+  get 'cart/:cart_id/pay', to: 'payments#cart_new', as: :new_cart_payment
+  post 'cart/:cart_id/pay', to: 'payments#cart_create', as: :cart_payments
 
 end
