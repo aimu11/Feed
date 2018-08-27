@@ -1,111 +1,59 @@
-<!-- <div class="col-xs-12"> -->
 
-  <div class="food-inventory-container" style="margin: 0 auto">
-    <div class="container">
-  	<div class="carousel">
-  		<input type="radio" id="carousel-1" name="carousel[]" checked>
-  		<input type="radio" id="carousel-2" name="carousel[]">
-       <input type="radio" id="carousel-3" name="carousel[]">
-  		<input type="radio" id="carousel-4" name="carousel[]">
-  		<input type="radio" id="carousel-5" name="carousel[]">
-
-
-
-
-
-
-
-
-  		<ul class="carousel__items">
-        <li class="carousel__item">
+<div class="food-inventory-container">
+  <div class="container">
+    <div class="owl-carousel">
+      <div class="scrollmenu">
 
         <% current_user.business.foods.each do |food| %>
 
-
-  			<li class="carousel__item">
-          <div class="add-food-form-container">
-            <%#= render "add_food" %>
-          </div>
-
-
-          <div class="inventory">
-
+          <div class="carousel-item">
             <div class="food-card">
-              <div class="food-img"><%= image_tag "rainbow" %></div>
-
-              <div class="food-details">
-                <h2>  <%= food.name %></h4>
-                <div class="food-description">
-                  <%= food.description %>
-                </div>
+            <div class="food-img"><%= image_tag "rainbow" %></div>
+            <div class="food-details">
+              <h2><%= food.name %></h2>
+              <div class="food-description">
+                <%= food.description %>
               </div>
-
-              <hr>
-
-              <div class="portions-number">
-                <div class="circle"><h5><%= food.portion %></h5></div>  Portions left
-              </div>
-
-              <hr>
-
-              <div class="order-info">
-                <h3>Order Before:</h3>
-                <%= food.pickup_end.strftime("%I:%M %p") %>
-              </div>
-
-              <hr>
-
-              <div class="pickup-time">
-                <h3>Pick-up</h3>
-                From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
-              </div>
-
-              <%= form_tag edit_food_path(food) do %>
-                <%= hidden_field_tag 'food', food.id %>
-                <%= submit_tag 'Edit', class: 'edit-btn' %>
-              <% end %>
-
             </div>
 
+            <hr>
+
+            <div class="portions-number">
+              <div class="circle">
+                  <h5><%= food.portion %></h5>
+              </div>  Portions left
+            </div>
+
+            <hr>
+
+            <div class="order-info">
+              <h3>Order Before:</h3>
+              <%= food.pickup_end.strftime("%I:%M %p") %>
+            </div>
+
+            <hr>
+
+            <div class="pickup-time">
+              <h3>Pick-up</h3>
+              From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
+            </div>
+
+            <%= link_to "Edit", edit_food_path(food) %>
+
+            </div>
           </div>
-
-
-
-
-        </li>
         <% end %>
-
-  		</ul>
-
-
-       <div class="carousel__prev">
-       	<label for="carousel-1"></label>
-       	<label for="carousel-2"></label>
-       	<label for="carousel-3"></label>
-       	<label for="carousel-4"></label>
-       	<label for="carousel-5"></label>
-       </div>
-       <div class="carousel__next">
-         <label for="carousel-1"></label>
-         <label for="carousel-2"></label>
-         <label for="carousel-3"></label>
-         <label for="carousel-4"></label>
-         <label for="carousel-5"></label>
-       </div>
-       <div class="carousel__nav">
-         <label for="carousel-1"></label>
-         <label for="carousel-2"></label>
-         <label for="carousel-3"></label>
-         <label for="carousel-4"></label>
-         <label for="carousel-5"></label>
-       </div>
-     </div>
-   </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="add-food-form-container">
 
-    <%= render "add_food" %>
-  </div>
+<br>
+<br>
+<br>
 
-<!-- </div> -->
+
+<div class="add-food-form-container">
+  <%= render "foods/add_food" %>
+</div>
