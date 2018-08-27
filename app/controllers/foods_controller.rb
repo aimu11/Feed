@@ -1,9 +1,6 @@
 class FoodsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-
-
-
   def index
     @foods = Food.all
     @index_page = true
@@ -26,12 +23,13 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    @food.business = Business.find(params[:business_id])
+    @food.business = current_user.business
+    
 
     if @food.save
-     redirect_to business_path
+     redirect_to business_dashboard_path
    else
-     redirect_to business_path
+     render :new
    end
   end
 
@@ -56,7 +54,7 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :description, :price, :portion, :order_before, :pickup_start, :pickup, :end, :dietary_category, :business_id, :photo)
+    params.require(:food).permit(:name, :description, :portion, :dietary_category, :food_type, :business_id, :order_before, :pickup_start, :pickup_end, :sku, :price_cents, :photo)
   end
 
 

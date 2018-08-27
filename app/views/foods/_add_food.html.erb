@@ -1,0 +1,25 @@
+<%= simple_form_for @food do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+  portion:
+<%= f.input :portion %>
+  <%= f.input :dietary_category, :collection => %w[Vegan, Vegetarian, Bio, Kosher, Gluten Free] %>
+
+  <%= f.input :food_type, :collection => %w[beef, salads, chicken, pasta, pizza, rice, french fries] %>
+
+
+<%= f.input :order_before, as: :datetime, html5: true %>
+<%= f.input :pickup_start, as: :datetime, html5: true %>
+<%= f.input :pickup_end, as: :datetime, html5: true %>
+
+  <%= f.input :sku %>
+
+price
+<%= f.input :price_cents %>
+
+  <%= f.submit "Add new item" %>
+<% end %>

@@ -3,7 +3,8 @@ class BusinessesController < ApplicationController
     @businesses = Business.where.not(latitude: nil, longitude: nil)
   end
 
-
+def create
+end
 
   def dashboard
     @food = Food.new
