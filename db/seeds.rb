@@ -262,7 +262,7 @@ Business.create!(business_params)
 #   )
  end
 
-100.times do |_|
+10.times do |_|
   order = Order.new
   customer = Customer.all.sample
   business = Business.all.sample

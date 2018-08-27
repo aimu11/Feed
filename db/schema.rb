@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.string "business_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
-    t.bigint "user_id"
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
+  end
+
+  create_table "dietary_categories", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "food_category", id: false, force: :cascade do |t|
+    t.bigint "food_id", null: false
+    t.bigint "dietary_category_id", null: false
   end
 
   create_table "foods", force: :cascade do |t|
@@ -53,6 +62,7 @@ ActiveRecord::Schema.define(version: 2018_08_26_131359) do
     t.datetime "order_before"
     t.datetime "pickup_start"
     t.datetime "pickup_end"
+    t.string "business_name"
     t.string "sku"
     t.integer "price_cents", default: 0, null: false
     t.string "photo"

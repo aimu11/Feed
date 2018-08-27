@@ -1,0 +1,164 @@
+.profile-container {
+
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px 30px;
+  background-color: white;
+  box-shadow: 2px 4px 5px lightgrey;
+  padding: 20px;
+
+
+
+  .title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #545454;
+    margin-right: 15px;
+
+
+  }
+
+  .content {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+  }
+
+  .edit-button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #922B3E;
+  margin-left: 15px;
+  }
+
+}
+
+.category-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px 30px;
+  background-color: white;
+  box-shadow: 2px 4px 5px lightgrey;
+  padding: 20px;
+
+
+  .title-category {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #545454;
+    margin-right: 15px;
+
+  }
+  .content-category {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+
+  }
+  .edit-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #922B3E;
+    margin-left: 15px;
+
+  }
+
+}
+
+.address-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px 30px;
+  background-color: white;
+  box-shadow: 2px 4px 5px lightgrey;
+  padding: 20px;
+
+  .title-address {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #545454;
+    margin-right: 15px;
+
+
+  }
+  .content-address {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+
+  }
+  .edit-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #922B3E;
+    margin-left: 15px;
+
+  }
+
+
+
+
+
+}
+
+  .user-business-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #00A218;
+    margin: 10px 30px;
+    background-color: white;
+    box-shadow: 2px 4px 5px lightgrey;
+
+  }
+
+
+
+
+
+    .category-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+
+  // }
+
+  // .edit-button {
+  // font-family: 'Nunito', sans-serif;
+  // font-weight: 900;
+  // font-size: 20px;
+  // color: #922B3E;
+  // }
+
+
+
+
+
+
+
+
+
+
+
+}
