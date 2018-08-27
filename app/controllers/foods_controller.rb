@@ -6,6 +6,7 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
+    @index_page = true
     #@foods = Food.where.not(latitude: nil, longitude: nil)
 
     @markers = @foods.map do |food|
