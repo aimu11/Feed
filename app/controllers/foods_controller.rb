@@ -20,13 +20,14 @@ class FoodsController < ApplicationController
   end
 
   def new
+    @food = Food.new
   end
 
   def create
-    @foods = Food.new(food_params)
-    @foods.business = Business.find(params[:business_id])
+    @food = Food.new(food_params)
+    @food.business = Business.find(params[:business_id])
 
-    if @foods.save
+    if @food.save
      redirect_to business_path
    else
      redirect_to business_path
