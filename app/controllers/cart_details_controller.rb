@@ -14,6 +14,8 @@ class CartDetailsController < ApplicationController
       cart: cart
       )
 
+
+
     if cart_detail.save
       if food.portion > 0
         food.portion -= 1
