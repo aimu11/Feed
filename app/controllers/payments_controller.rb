@@ -16,8 +16,13 @@ class PaymentsController < ApplicationController
       email:  params[:stripeEmail]
     )
 
-    price_cents = @cart.orders.sum(&:price_cents)
-    currency = @cart.orders.first.price.currency #TODO FIX THIS FOR INTERNATIONAL
+    price_cents = 0
+
+    @cart.cart_details.each do |cart_detail|
+      price_cents += cart_detail.food.price_cents
+    end
+
+    currency = Food.first.price.currency #TODO FIX THIS FOR INTERNATIONAL
     order_ids = @cart.order_ids
     food_skus = @cart.cart_details.map(&:food).map(&:sku)
 
