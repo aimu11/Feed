@@ -1,8 +1,9 @@
 .dashboard-nav {
   margin-top: 70px;
-  // a:hover {
-  //   background-color: #D4FFD1 !important;
-  // }
+
+  a:hover {
+  background-color: #D4FFD1 !important;
+  }
 
   a {
     font-family: "Nunito", sans-serif;
@@ -11,22 +12,22 @@
     color: #003C12 !important;
     padding: 0 auto !important;
   }
+}
 
   ul {
     background-color: #F3FFF2;
   }
+
   ul li {
     width: 25%;
     margin:0 !important;
     background-color: #F3FFF2;
-
   }
 
-    li.active a {
+  li.active a {
           background-color: #00A218 !important;
           color: #fff !important;
           // height: 100%;
     }
 
 
-}
