@@ -8,7 +8,9 @@ class FoodsController < ApplicationController
 
     meal_icon = "group_6.png"
 
+
     @markers = @foods.map do |food|
+      # binding.pry
       {
         lat: food.business.latitude,
         lng: food.business.longitude,
