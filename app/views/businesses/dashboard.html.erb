@@ -1,15 +1,62 @@
 
+
 <div class="dashboard-container">
   <div class="dashboard-nav">
+
     <ul class="nav nav-pills">
-      <li class="active"><a href="#">Current Orders</a></li>
-      <li><a href="#">Past Orders</a></li>
-      <li><a href="#">Inventory</a></li>
-      <li><a href="#">Profile</a></li>
+
+      <li class="active">
+        <a  data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+          Current Orders
+        </a>
+      </li>
+
+      <li>
+        <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+          Past Orders
+        </a>
+      </li>
+      <li>
+        <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+          Inventory
+        </a>
+      </li>
+      <li>
+        <a  data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+          Profile
+        </a>
+      </li>
     </ul>
+
+
+  <div class="collapse" id="collapseExample1">
+    <div class="card card-body">
+      <%= render "current_orders" %>
+    </div>
   </div>
 
-    <!-- <%= render "current_orders" %> -->
-    <%= render "food_inventory" %>
+  <div class="collapse" id="collapseExample2">
+    <div class="card card-body">
+      <%= render "past_orders" %>
+    </div>
+  </div>
+
+  <div class="collapse" id="collapseExample3">
+    <div class="card card-body">
+      <%= render "food_inventory" %>
+    </div>
+  </div>
+
+  <div class="collapse" id="collapseExample4">
+    <div class="card card-body">
+      <%= render "profile" %>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
 
 </div>
