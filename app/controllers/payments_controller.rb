@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_order, except: [:cart_new, :cart_create]
+  before_action :set_order, except: [:cart_new, :cart_create, :thanks]
 
   def new
   end
@@ -43,11 +43,14 @@ class PaymentsController < ApplicationController
     @cart.customer_id = nil
     @cart.save!
 
-    redirect_to dashboard_path
+    redirect_to thanks_path(@cart)
 
     rescue Stripe::CardError => e
     flash[:alert] = e.message
     redirect_to new_cart_payment_path(@cart)
+  end
+
+  def thanks
   end
 
   def create

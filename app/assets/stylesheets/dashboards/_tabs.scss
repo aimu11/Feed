@@ -1,5 +1,17 @@
 .dashboard-nav {
   margin-top: 70px;
+
+  a:hover {
+  background-color: #D4FFD1 !important;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #003C12 !important;
+  padding: 0 auto !important;
+}
 }
 
 
@@ -19,14 +31,6 @@ ul li {
         // height: 100%;
       }
 
-a:hover {
-  background-color: #D4FFD1 !important;
-}
 
-a {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  color: #003C12 !important;
-  padding: 0 auto !important;
-}
+
+
