@@ -18,4 +18,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( owl_slider.js )
 
 
-Rails.application.config.assets.precompile += %w( slider-carousel.js )
+Rails.application.config.assets.precompile += %w( slider_carousel.js )

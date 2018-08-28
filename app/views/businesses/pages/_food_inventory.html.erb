@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+
+
+          <% @first_item.each do |food| %>
+            <div class="item active" >
+              <div class="col-xs-4">
+                <div class="food-card">
+                <div class="food-img" style="background-image: url('<%= cl_image_path(food.photo) unless food.photo.blank? %>')">
+                </div>
+                <div class="food-details">
+                  <h2><%= food.name %></h2>
+                  <div class="food-description">
+                    <%= food.description %>
+                  </div>
+                </div>
+                <hr>
+                <div class="portions-number">
+                  <div class="circle">
+                      <h5><%= food.portion %></h5>
+                  </div>  Portions left
+                </div>
+                <hr>
+                <div class="order-info">
+                  <h3>Order Before:</h3>
+                  <%= food.pickup_end.strftime("%I:%M %p") %>
+                </div>
+                <hr>
+                <div class="pickup-time">
+                  <h3>Pick-up</h3>
+                  From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
+                </div>
+                <%= link_to "Edit", edit_food_path(food) %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <% @food_without_first.each do |food| %>
+            <div class="item" >
+              <div class="col-xs-4">
+                <div class="food-card">
+                  <div class="food-img" style="background-image: url('<%= cl_image_path(food.photo) unless food.photo.blank? %>')">
+                  </div>
+                <div class="food-details">
+                  <h2><%= food.name %></h2>
+                  <div class="food-description">
+                    <%= food.description %>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="portions-number">
+                  <div class="circle">
+                      <h5><%= food.portion %></h5>
+                  </div>  Portions left
+                </div>
+
+                <hr>
+
+                <div class="order-info">
+                  <h3>Order Before:</h3>
+                  <%= food.pickup_end.strftime("%I:%M %p") %>
+                </div>
+
+                <hr>
+
+                <div class="pickup-time">
+                  <h3>Pick-up</h3>
+                  From <%= food.pickup_start.strftime("%I:%M %p") %> - Till <%= food.pickup_end.strftime("%I:%M %p") %>
+                </div>
+
+                <%= link_to "Edit", edit_food_path(food) %>
+
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+
+
+        </div>
+          <!-- <div class="item active">
+            <div class="col-xs-4">
+              <a href="#1">
+                <img src="http://placehold.it/300/f44336/000000" class="img-responsive">
+              </a>
+            </div>
+          </div> -->
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
