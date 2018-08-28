@@ -13,9 +13,6 @@ end
     end
   end
 
-
-
-
     def edit
       @business = current_user.business
 
