@@ -31,5 +31,5 @@ end
 
   get 'cart/:cart_id/pay', to: 'payments#cart_new', as: :new_cart_payment
   post 'cart/:cart_id/pay', to: 'payments#cart_create', as: :cart_payments
-
+  get 'cart/:cart_id/thanks', to: 'payments#thanks', as: :thanks
 end

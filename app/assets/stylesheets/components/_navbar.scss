@@ -20,12 +20,16 @@
     font-weight: bold;
   }
 }
+.navbar-wagon-brand {
+  display: flex;
+}
 
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
   margin-top: 5spx;
   margin-left: 15px;
+  margin-right: 7px;
 }
 
 /* User Avatar */
@@ -87,6 +91,13 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.white-name {
+  color: white;
+}
+.green-name {
+  color: #003C12;
 }
 
 .navbar-wagon {

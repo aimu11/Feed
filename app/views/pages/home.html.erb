@@ -7,28 +7,30 @@
   <div class="banner-content text-center">
     <h1>Do good: feel good</h1>
     <p>Find tasty meals and fresh groceries</p>
-    <%= link_to "Try it now", foods_path , class: "btn btn-lg btn-success"  %>
+    <%= link_to "Try it now", foods_path , class: "btn btn-lg btn-primary"  %>
   </div>
 </div>
 
-<div class="footer">
+<div class="section-container">
+<div class="summary">
+      <h3>A true win-win situation</h3>
+    <p>Find tasty meals and fresh groceries, get to know restaurants,<br> hotels and supermarkets near you.</p>
+</div>
 
-    <h4>A true win-win situation</h4>
-    <p>Find tasty meals and fresh groceries, get to know restaurants, hotels and supermarkets near you.</p>
   <div class="flex-services">
-    <div class="quick-and-easy">
+    <div class="info">
       <%= image_tag 'quick.png' %>
-      <p><h6>Quick and Easy</h6> Find the best meals from your favorite restaurants,<br>hotels or fresh groceries from supermarkets,<br> purchase them, pickup and enjoy at home.</p>
+      <p><h5>Quick and Easy</h5> Find the best meals from your favorite restaurants, hotels or fresh groceries from supermarkets, purchase them, pickup and enjoy at home.</p>
     </div>
 
-    <div class="affordable">
+    <div class="info">
       <%= image_tag 'affordable.png' %>
-      <p><h6>Affordable</h6>Hundreds of surplus tasty meals and fresh groceries,<br>save up to 80% from restaurants,<br> hotels, and supermarkets prices.</p>
+      <p><h5>Affordable</h5>Hundreds of surplus tasty meals and fresh groceries, save up to 80% from restaurants, hotels, and supermarkets prices.</p>
     </div>
 
-    <div class="planet">
+    <div class="info">
       <%= image_tag 'planet.png' %>
-      <p><h6>Save the Planet</h6> Go green by caring about the environment,<br> reduce unnecessary emissions caused by food production.</p>
+      <p><h5>Save the Planet</h5> Go green by caring about the environment, reduce unnecessary emissions caused by food production.</p>
     </div>
   </div>
 </div>
