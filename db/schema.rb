@@ -59,6 +59,15 @@ ActiveRecord::Schema.define(version: 2018_08_27_100534) do
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
+  create_table "dietary_categories", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "food_category", id: false, force: :cascade do |t|
+    t.bigint "food_id", null: false
+    t.bigint "dietary_category_id", null: false
+  end
+
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -71,6 +80,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_100534) do
     t.datetime "order_before"
     t.datetime "pickup_start"
     t.datetime "pickup_end"
+    t.string "business_name"
     t.string "sku"
     t.integer "price_cents", default: 0, null: false
     t.string "photo"
