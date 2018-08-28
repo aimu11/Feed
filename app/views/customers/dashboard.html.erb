@@ -1,4 +1,24 @@
-<div class="wrapper">
+<div class="dashboard-container">
+  <div class="dashboard-nav">
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#">Current Orders</a></li>
+      <li><a href="#">Past Orders</a></li>
+      <li><a href="#">Shopping Cart</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </div>
+
+  <%= render "current_orders" %>
+  <%= render "edit" %>
+
+
+
+    <!-- <%= render "current_orders" %> -->
+
+</div>
+
+
+<!-- <div class="wrapper">
   <div id="box">
 
     <div class="dashboard-container">
@@ -14,12 +34,11 @@
       <div id="tab1">
         <section id="first-tab-group" class="tabgroup">
 
-          <%= render "current_orders" %>
 
       </section>
     </div>
 
-    <%= render "edit" %>
+
 
   </div>
-</div>
+</div> -->
