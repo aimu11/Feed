@@ -14,24 +14,20 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
-
-
      <!-- Links when logged in -->
 
-       <% if !@home %>
+
       <!-- Links when logged in -->
 
-      <%= link_to "Eat", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Sell", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Download the app", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#= link_to "Eat", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
-       <% if !current_user.customer.nil? %>
+       <% if !current_user.customer.nil? && !@home %>
         <%= link_to cart_path(current_user.customer.cart) do %>
           <%= image_tag 'shopping-cart-red.png', class: "avatar" %>
         <% end %>
         <%= current_user.customer.cart.cart_details.size %>
       <% end %>
-      <% end %>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -40,7 +36,7 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to dashboard_path(@user) do %>
-                <i class="fa fa-user"></i> <%= t(".dashboard", default: "Dashboard") %>
+                 <%= t(".dashboard", default: "Dashboard") %>
               <% end %>
             </li>
 
