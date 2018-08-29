@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 end
 
 
-  get "edit_food", to: "foods#edit", as: :edit_food
+  # get "edit_food", to: "foods#edit", as: :edit_food
   get "dashboard", to: "customers#dashboard", as: :dashboard
   get "business_dashboard", to: "businesses#dashboard", as: :business_dashboard
   #get "users/sign_out", to: "devise/sessions#destroy"
@@ -31,5 +31,5 @@ end
 
   get 'cart/:cart_id/pay', to: 'payments#cart_new', as: :new_cart_payment
   post 'cart/:cart_id/pay', to: 'payments#cart_create', as: :cart_payments
-
+  get 'cart/:cart_id/thanks', to: 'payments#thanks', as: :thanks
 end

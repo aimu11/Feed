@@ -1,12 +1,7 @@
 
 
 <div class="profile-container">
-  <h2> Profile </h2>
-
-
   <div class="profile-info">
-
-
     <div class="user-business-name"> Hello  <%= current_user.business.name %> </div>
 
     <div class="profile-row">
@@ -15,7 +10,7 @@
         <%= current_user.business.description %>
       </div>
       <div class="edit-button">
-        <%= link_to "edit", edit_business_path(current_user.business)  %>
+        <%= link_to "Edit", edit_business_path(current_user.business)  %>
       </div>
     </div>
 
@@ -26,21 +21,19 @@
          <%= current_user.business.dietary_category %>   <%= image_tag "bread" %>
         </div>
         <div class="edit-button">
-          <%= link_to "edit", edit_business_path(current_user.business)  %>
+          <%= link_to "Edit", edit_business_path(current_user.business)  %>
         </div>
     </div>
+
     <div class="address-row">
       <div class="title-address">Address:</div>
       <div class="content-address">
         <%= current_user.business.address %>
       </div>
       <div class="edit-button">
-        <%= link_to "edit", edit_business_path(current_user.business)  %>
+        <%= link_to "Edit", edit_business_path(current_user.business)  %>
       </div>
     </div>
   </div>
 
 </div>
-
-
-

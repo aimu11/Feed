@@ -6,10 +6,19 @@ class FoodsController < ApplicationController
     @index_page = true
     #@foods = Food.where.not(latitude: nil, longitude: nil)
 
+    meal_icon = "group_6.png"
+
+
     @markers = @foods.map do |food|
+      # binding.pry
       {
         lat: food.business.latitude,
         lng: food.business.longitude,
+        icon: meal_icon,
+        restaurant: {
+          name: food.business.name,
+          address: food.business.address
+        }
       }
     end
   end
@@ -24,7 +33,7 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(food_params)
     @food.business = current_user.business
-    
+
 
     if @food.save
      redirect_to business_dashboard_path

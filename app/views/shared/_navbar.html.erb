@@ -3,8 +3,10 @@
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <% if @home %>
       <%= image_tag "meal_icon_white.png", height: 120 %>
+      <h4 class="white-name">Feed</h4>
     <% else %>
       <%= image_tag "meal_icon.png", height: 50 %>
+      <h4 class="green-name">Feed</h4>
     <% end %>
   <% end %>
 
@@ -13,7 +15,12 @@
 
     <% if user_signed_in? %>
 
+
      <!-- Links when logged in -->
+
+       <% if !@home %>
+      <!-- Links when logged in -->
+
       <%= link_to "Eat", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sell", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Download the app", "#", class: "navbar-wagon-item navbar-wagon-link" %>
@@ -23,6 +30,7 @@
           <%= image_tag 'shopping-cart-red.png', class: "avatar" %>
         <% end %>
         <%= current_user.customer.cart.cart_details.size %>
+      <% end %>
       <% end %>
 
       <!-- Avatar with dropdown menu -->

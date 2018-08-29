@@ -22,7 +22,7 @@
       <hr>
       <div class="cust-info">
         <div class="made-by"><li >Made by <%= order.customer.first_name %> <%= order.customer.last_name %></li></div>
-        <li class= "price-style">$ <%= humanized_money_with_symbol(food.price) %>.00</li>
+        <li class= "price-style"><%= humanized_money_with_symbol(order.food.price) %>.00</li>
       </div>
     </div>
   <% end %>
