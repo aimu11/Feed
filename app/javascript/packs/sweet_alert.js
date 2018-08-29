@@ -1,7 +1,7 @@
 // ES6 Modules or TypeScript
 import swal from 'sweetalert2'
 
-
+console.log('okk')
 
 const btns = document.querySelectorAll(".cart-btn");
 
