@@ -1,38 +1,32 @@
 .dashboard-nav {
   margin-top: 70px;
-
-  a:hover {
-  background-color: #D4FFD1 !important;
-  }
-
   a {
     font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-size: 22px;
     color: #003C12 !important;
     padding: 0 auto !important;
+    &:hover {
+      background-color: #D4FFD1;
+    }
   }
 }
+  //
+  // ul {
+  //   background-color: #F3FFF2;
+  // }
 
-  ul {
-    background-color: #F3FFF2;
-  }
-
-  ul li {
+  ul > li.dash-tab {
     width: 25%;
     margin:0 !important;
     background-color: #F3FFF2;
   }
 
   li.active a {
-          background-color: #00A218 !important;
+          background-color: #003C12 !important;
           color: #fff !important;
           // height: 100%;
+          &:hover {
+          background-color: #D05B71 !important;
+        }
     }
-
-
-//a:hover {
-  //background-color: #D05B71 !important;
-//}
-
-

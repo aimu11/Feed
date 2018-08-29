@@ -7,21 +7,21 @@
       <div class="card-current-order">
         <div class="order-number"><%= i = i + 1  %></div>
         <div class="food-info">
-          <div class="food-name"><li><%= order.food.name %></li></div>
-          <li>Dietary Category: <%= order.food.dietary_category%></li>
+          <div class="food-name"><%= order.food.name %></div>
+          Dietary Category: <%= order.food.dietary_category%>
         </div>
 
         <div class="pick-info">
           <div class="portions-and-number">
-            <li class="portion"><%= order.food.portion %></li>
-            <li>Portions</li>
+            <div class="portion"><%= order.food.portion %></div>
+            Portions
           </div>
-          <li>Pickup Time: <%= order.food.pickup_start.strftime("%I:%M %p")  %> - <%= order.food.pickup_end.strftime("%I:%M %p") %></li>
+
         </div>
 
         <div class="cust-info">
-          <div class="made-by"><li >Made by <%= order.customer.first_name %> <%= order.customer.last_name %></li></div>
-          <li class= "price-style"> <%=humanized_money_with_symbol( order.food.price) %>.00</li>
+          <div class="made-by">Made by <strong><%= order.customer.first_name %> <%= order.customer.last_name %></strong></div>
+          <div class= "price-style"> <%=humanized_money_with_symbol( order.food.price) %>.00</div>
         </div>
       </div>
     <% end %>

@@ -5,10 +5,10 @@
         <div class="carousel-inner">
 
 
-            <div class="item active" >
+            <!-- <div class="item active" >
               <div class="col-xs-4">
-                <div class="food-card">
-                <div class="food-img" style="background-image: url('<%= image_path "salad2.png" %>")>
+                <div class="inv-food-card">
+                <div class="food-picture" style="background-image: url('<%= @first_item.photo %>')">
                 </div>
                 <div class="food-details">
                   <h2><%= @first_item.name %></h2>
@@ -35,14 +35,14 @@
                 <%= link_to "Edit", edit_food_path(@first_item) %>
                 </div>
               </div>
-            </div>
+            </div> -->
 
 
-          <% @food_without_first.each do |food| %>
-            <div class="item" >
+          <% @inventory.each do |food| %>
+            <div class="item active" >
               <div class="col-xs-4">
                 <div class="food-card">
-                  <div class="food-img" style="background-image: url('<%= image_path "salad2.png" %>') >
+                  <div class="food-picture" style="background-image: url('<%= food.photo %>')">
                   </div>
                 <div class="food-details">
                   <h2><%= food.name %></h2>
