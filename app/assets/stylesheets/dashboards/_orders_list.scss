@@ -2,14 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 30px;
+  padding:35px;
+  // margin: 10px 30px;
+  height: 134px;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: #545454;
+  font-family: "Nunito", sans-serif;
+
+
   li {
     list-style: none;
   }
-  background-color: white;
-  box-shadow: 2px 4px 5px lightgrey;
 }
 
+.card-current-order :hover {
+  background-color: #D4FFD1;
+}
 
 hr {
   border-left: 1px solid #E0E0E0;
@@ -18,8 +28,7 @@ hr {
 
 .food-info, .cust-info, .pick-info {
   flex: 1 0;
-  margin-left: 40px;
-  margin-right: 40px;
+
 }
 
 .order-number {
@@ -55,7 +64,10 @@ hr {
 
 
 .food-name {
-  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #003C12;
+  font-family: "Nunito", sans-serif;
 }
 
 .made-by {
