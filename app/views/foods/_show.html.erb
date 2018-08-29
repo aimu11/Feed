@@ -1,6 +1,6 @@
 <div class="food-show-card">
 
-  <div class="food-picture" style="background: url(<%= asset_path 'salad2.png' %>)">
+  <div class="food-picture" style="background-image: url('<%= food.photo %>')">
     <div class="diet-icons"></div>
   </div>
 
@@ -9,7 +9,7 @@
       <div class="food-name">
         <h3><%= food.name %></h3>
         <div class="food-description">
-          <%= food.description %>
+          <%= food.description.truncate(50, omission: '', separator: /,?\.* +/) %>
         </div>
       </div>
       <div class="food-price">
@@ -30,7 +30,10 @@
 
     <div class="order-details">
       <div class="portions-number">
-        <div class="circle"><h5><%= food.portion %></h5></div>  Portions left
+        <div class="circle">
+          <h5 id="prtn#{food.id}"><%= food.portion %></h5>
+        </div>
+        Portions left
       </div>
       <div class="pickup-time">
         <h5>Pick-up</h5>
@@ -39,13 +42,14 @@
     </div>
   </div>
 
-
-<%= link_to 'Add to Cart', food_cart_details_path(food), class: 'order-button order-btn', method: :post  %>
+<% if food.portion != 0 %>
+  <%= link_to 'Add to Cart', food_cart_details_path(food), class: 'order-button order-btn cart-btn',remote: true, method: :post, html: "data-food=#{food.id}"  %>
 
     <%#= form_tag food_cart_details_path(food) do %>
       <%#= hidden_field_tag 'food', food.id %>
       <%#= submit_tag 'Add to Cart', class: 'order-button order-btn' %>
     <%# end %>
 
-
+<% end %>
 </div>
+
