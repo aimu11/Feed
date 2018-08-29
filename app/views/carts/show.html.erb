@@ -1,57 +1,5 @@
 <div class="container-cart">
-  <% i = 0 %>
 
-  <% @cart.cart_details.each do |cart_detail| %>
-
-    <div class="card-current-order">
-      <div class="order-number"><%= i = i + 1  %></div>
-      <div class="quantity">
-      </div>
-
-      <div class="food-info">
-        <div class="food-name"><li>Food: <%= cart_detail.food.name %></li></div>
-        <li>Dietary Category: <%= cart_detail.food.dietary_category%></li>
-      </div>
-      <hr>
-      <div class="pick-info">
-        <div class="portions-and-number">
-          <li class="portion"><%= cart_detail.quantity %></li>
-          <li>Portion</li>
-        </div>
-      </div>
-      <hr>
-      <div class="price-cards">
-        <%= cart_detail.food.price %>
-      </div>
-    </div>
-
-  <% end %>
-
-  <% if @cart.cart_details.size != 0 %>
-
-    <div class="strp-btn-algn">
-      <%= form_tag cart_payments_path(@cart) do %>
-        <article>
-        <label class="amount">
-
-        <span>Price: <%= humanized_money_with_symbol(@cart.price) %></span>
-       </label>
-       </article>
-
-       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-       data-name="My Food"
-       data-email="<%= current_user.email %>"
-       data-description="Welcome to Feed"
-       data-amount="<%= @cart.price_cents %>"
-       data-currency="<%= Food.first.price.currency %>"></script>
-      <% end %>
-    </div>
-  <% else  %>
-    <div class="empty-cart">
-      <h2> Hello, your cart is empty</h2>
-    <%= link_to "Search for Foods", foods_path %>
-    </div>
-  <% end %>
+<%= render "cart_details", cart: @cart  %>
 
 </div>
