@@ -1,5 +1,15 @@
 import GMaps from 'gmaps/gmaps.js';
 
+let markers = []
+
+window.mapOpenInfo = (id) => {
+  markers.forEach((marker) => {
+    if (marker.food_id == id) {
+      marker.openInfoWindow()
+    }
+  })
+}
+
 const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const markersData = JSON.parse(mapElement.dataset.markers)
@@ -16,7 +26,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
 
   const bounds = new google.maps.LatLngBounds();
-  const markers = markersData.map(function(data) {
+  markers = markersData.map(function(data) {
     const marker = new google.maps.Marker({
       position: data,
       map: map,
@@ -27,18 +37,21 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     bounds.extend(loc);
 
 
-    marker.addListener('click', function() {
+    const openInfoWindow = function() {
       infowindow.setContent(`
 
         <h4>${data.restaurant.name}</h4>
         <p>${data.restaurant.address}</p>
 
 
-
-
         `)
       infowindow.open(map, marker);
-    });
+    };
+
+    marker.food_id = data.food_id
+    marker.openInfoWindow = openInfoWindow
+
+    marker.addListener('click', openInfoWindow );
 
 
     return marker

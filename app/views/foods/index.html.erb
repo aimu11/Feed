@@ -9,7 +9,7 @@
     <div class="col-xs-12 wrapper-card">
       <% @foods.each do |food| %>
     <%#= link_to '', '#', class: 'card-link', data: { toggle: 'tooltip', placement: 'right', html: true } %>
-        <div class="food-card" data-toggle="tooltip" data-placement="right">
+        <div class="food-card" onclick="mapOpenInfo(<%= food.id %>)" data-toggle="tooltip" data-placement="right">
           <div class="food-card-content">
             <div class="food-item">
               <p>
