@@ -22,7 +22,7 @@
       <%#= link_to "Eat", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
        <% if !current_user.customer.nil? && !@home %>
-        <%= link_to cart_path(current_user.customer.cart) do %>
+        <%= link_to dashboard_path(@user, :anchor => "pills-shopping-cart") do %>
           <%= image_tag 'shopping-cart-red.png', class: "avatar" %>
         <% end %>
         <%= current_user.customer.cart.cart_details.size %>
@@ -67,4 +67,3 @@
     </div>
   </div>
 </div>
-
