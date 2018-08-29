@@ -1,4 +1,7 @@
 
+
+<div class="current_orders">
+
               <% current_user.customer.orders.each do |order| %>
                 <li>
                   <b><%= order.food.name %></b>
@@ -11,4 +14,5 @@
                   tonight
                 </li>
               <% end %>
-            </ul>
+
+</div>
