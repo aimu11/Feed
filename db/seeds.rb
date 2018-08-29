@@ -224,10 +224,13 @@ marian = Business.find_by_name("Cafe Landwer")
 
 # ----------------------Roger -------- L'Entrecote---------------------
 
+
+
+
 entrecote_meals_1 = Food.create!(
   name: "Salmon Carpacio",
   description: "In olive oil and balsamic salad, beets, carrots and arugula leaves",
-  price: 26,
+  price: 16,
   portion: portion_foods.sample,
   sku: "sc/E-1",
   dietary_category: "Kosher",
@@ -242,7 +245,7 @@ entrecote_meals_1 = Food.create!(
 entrecote_meals_2 = Food.create!(
   name: "Grilled Parguit Steak",
   description: "served with a soy and green beans",
-  price: 45,
+  price: 15,
   portion: portion_foods.sample,
   sku: "gp/E-2",
   dietary_category: "Kosher",
@@ -276,7 +279,7 @@ entrecote_meals_3 = Food.create!(
 c2_meals_1 = Food.create!(
   name: "Sashimi Sea Fish ",
   description: "Green Beans Green Onions Coriander Almond Almonds Red Chili In a green gaspci sauce",
-  price: 42,
+  price: 12,
   portion: portion_foods.sample,
   sku: "sf/C-1",
   dietary_category: "Kosher",
@@ -292,7 +295,7 @@ c2_meals_1 = Food.create!(
 c2_meals_2 = Food.create!(
   name: "Red tuna Steak",
   description: "chunks of sesame paste alongside a stir - fried pasta in Eli Olio sauce Cherry tomatoes Boccaccio Saum-tam sauce",
-  price: 45,
+  price: 15,
   portion: portion_foods.sample,
   sku: "rt/C-2",
   dietary_category: "Kosher",
@@ -309,7 +312,7 @@ c2_meals_2 = Food.create!(
 c2_meals_3 = Food.create!(
   name: "Sea Bream Fillet",
   description: "Bream Fillet of Crisps Homemade potato gnocchi Roasted Eggplant Kalamata olives Dried tomatoes Pickled lemon Lemon - Persian Powder Herbs",
-  price: 54,
+  price: 14,
   portion: portion_foods.sample,
   sku: "bf/C-3",
   dietary_category: "Kosher",
@@ -397,7 +400,7 @@ bugsy_1 = Food.create!(
 bugsy_2 = Food.create!(
   name: "Beef Filet",
   description: "served with green beans",
-  price: 25,
+  price: 15,
   portion: portion_foods.sample,
   sku: "bf/B-2",
   dietary_category: "Kosher",
@@ -413,7 +416,7 @@ bugsy_2 = Food.create!(
 bugsy_3 = Food.create!(
   name: "Salmon Filet",
   description: "served with mash potatoes",
-  price: 28,
+  price: 18,
   portion: portion_foods.sample,
   sku: "bf/B-2",
   dietary_category: "Kosher",
@@ -432,7 +435,7 @@ bugsy_3 = Food.create!(
 carmen_1 = Food.create!(
   name: "Entrecote 200g",
   description: "served with salad",
-  price: 28,
+  price: 18,
   portion: portion_foods.sample,
   sku: "en/C-1",
   dietary_category: "Kosher",
@@ -447,7 +450,7 @@ carmen_1 = Food.create!(
 carmen_2 = Food.create!(
   name: "Sea Bream Fillet",
   description: "served with special sauce",
-  price: 30,
+  price: 10,
   portion: portion_foods.sample,
   sku: "sb/C-2",
   dietary_category: "Kosher",
@@ -464,7 +467,7 @@ carmen_2 = Food.create!(
 carmen_3 = Food.create!(
   name: "Mushrooms Teriaky",
   description: "cooked in Teriaky and served with bread",
-  price: 20,
+  price: 10,
   portion: portion_foods.sample,
   sku: "mt/C-3",
   dietary_category: "Kosher",
