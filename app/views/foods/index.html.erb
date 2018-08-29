@@ -37,5 +37,11 @@
 </div>
 
 
+<%= content_for(:after_js) do %>
+
+ <%= javascript_pack_tag 'sweet_alert' %>
+
+<% end  %>
+
 <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
 </button> -->
