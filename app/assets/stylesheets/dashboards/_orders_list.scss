@@ -10,15 +10,11 @@
   font-weight: 400;
   color: #545454;
   font-family: "Nunito", sans-serif;
-
+  text-align: left;
 
   li {
     list-style: none;
   }
-}
-
-.card-current-order :hover {
-  background-color: #D4FFD1;
 }
 
 hr {
@@ -31,8 +27,10 @@ hr {
 
 }
 
+.food-info {
+  padding-left: 20px;
+}
 .order-number {
-  margin-left: 40px;
   font-weight: bold;
 }
 

@@ -17,11 +17,10 @@
           <li class="portion"><%= order.food.portion %></li>
           <li>Portions</li>
         </div>
-        <li>Pickup Time: <%= order.food.pickup_start.strftime("%I:%M %p")  %> - <%= order.food.pickup_end.strftime("%I:%M %p") %></li>
       </div>
       <hr>
       <div class="cust-info">
-        <div class="made-by"><li >Made by <%= order.customer.first_name %> <%= order.customer.last_name %></li></div>
+        <div class="made-by"><li >Made by <strong><%= order.customer.first_name %> <%= order.customer.last_name %></strong></li></div>
         <li class= "price-style"><%= humanized_money_with_symbol(order.food.price) %>.00</li>
       </div>
     </div>
