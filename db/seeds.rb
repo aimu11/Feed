@@ -168,7 +168,7 @@ business_params = [
   {
      user: rafa,
      name: "Bugsy",
-     address: "Salameh 44 Tel Aviv",
+     address: "Shalma 44 Tel Aviv",
      city: "Tel Aviv",
      phone_number: phone_numbers_businesses.sample,
      description: "Sixteen years have passed already that gastronomic Bistrot Bugsy has given pleasure to all of Tel Aviv. Considered as one of the most popular chef’s restaurants in the White City, Bugsy offers an experience that will stimulate your senses. In the kitchen, Chef Haya Klor offers a refined cuisine with multiple influences to taste in a cozy setting, mixing gourmet atmosphere with the dynamic and warm ambiance of a bar where music accompanies your meal. Every Thursday and Saturday nights, enjoy musical evenings with a DJ!",
@@ -225,22 +225,23 @@ marian = Business.find_by_name("Cafe Landwer")
 # ----------------------Roger -------- L'Entrecote---------------------
 
 entrecote_meals_1 = Food.create!(
-  name: "Beef Carpacio",
+  name: "Salmon Carpacio",
   description: "In olive oil and balsamic salad, beets, carrots and arugula leaves",
   price: 26,
   portion: portion_foods.sample,
-  sku: "bc/E-1",
+  sku: "sc/E-1",
   dietary_category: "Kosher",
-  food_type: "Meat",
+  food_type: "Fish",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://beteavone.com/wp-content/uploads/2016/12/12068858_1060246877332646_1249838114918248905_o-697x415.jpg",
   business: roger
   )
 
 entrecote_meals_2 = Food.create!(
   name: "Grilled Parguit Steak",
-  description: "served with a soy and mirin marinade",
+  description: "served with a soy and green beans",
   price: 45,
   portion: portion_foods.sample,
   sku: "gp/E-2",
@@ -249,6 +250,7 @@ entrecote_meals_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "http://hbkburger.fr/wp-content/uploads/2015/09/parguit.jpg",
   business: roger
   )
 
@@ -264,11 +266,12 @@ entrecote_meals_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.booths.co.uk/wp-content/uploads/p8_brazilian_kebab_web-660x371.jpg",
   business: roger
   )
 
 
-# ----------------------Florian ----------- 2C---------------------
+# ----------------------Florian -----2C---------------------
 
 c2_meals_1 = Food.create!(
   name: "Sashimi Sea Fish ",
@@ -281,12 +284,13 @@ c2_meals_1 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.wikihow.com/images/1/15/Make-Sashimi-Step-3-Version-2.jpg",
   business: florian
   )
 
 
 c2_meals_2 = Food.create!(
-  name: "Red tuna",
+  name: "Red tuna Steak",
   description: "chunks of sesame paste alongside a stir - fried pasta in Eli Olio sauce Cherry tomatoes Boccaccio Saum-tam sauce",
   price: 45,
   portion: portion_foods.sample,
@@ -296,13 +300,14 @@ c2_meals_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.lucybee.com/imagegen.ashx?image=/media/451323/tuna-steak-1-copy.jpg&width=700",
   business: florian
   )
 
 
 
 c2_meals_3 = Food.create!(
-  name: "Bream Fillet",
+  name: "Sea Bream Fillet",
   description: "Bream Fillet of Crisps Homemade potato gnocchi Roasted Eggplant Kalamata olives Dried tomatoes Pickled lemon Lemon - Persian Powder Herbs",
   price: 54,
   portion: portion_foods.sample,
@@ -312,6 +317,7 @@ c2_meals_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/food/recipes/fish/grilled-sea-bream-mediterranean-mash-283626368-1280.jpg",
   business: florian
   )
 
@@ -331,13 +337,14 @@ bino_bepita_meals_1 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "http://www.restaurantcacher.com/restaurant-cacher/as-du-fallafel/images/slider/as-du-fallafel-2.jpg",
   business: novak
   )
 
 
 bino_bepita_meals_2 = Food.create!(
   name: "Chicken Curry",
-  description: "Chicken cooked in a curry sauce",
+  description: "Chicken cooked in a curry sauce with rice",
   price: 18,
   portion: portion_foods.sample,
   sku: "cc/BP-2",
@@ -346,6 +353,7 @@ bino_bepita_meals_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://hips.hearstapps.com/del.h-cdn.co/assets/17/31/1501791674-delish-chicken-curry-horizontal.jpg",
   business: novak
   )
 
@@ -363,6 +371,7 @@ bino_bepita_meals_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.simplyrecipes.com/wp-content/uploads/2011/07/beef-kabobs-horiz-a-1600.jpg",
   business: novak
   )
 
@@ -370,16 +379,17 @@ bino_bepita_meals_3 = Food.create!(
 
 
 bugsy_1 = Food.create!(
-  name: "Liverwurst",
-  description: "served with bread",
+  name: "Foccacia",
+  description: "served dried tomatoes",
   price: 18,
   portion: portion_foods.sample,
-  sku: "lw/B-1",
+  sku: "fc/B-1",
   dietary_category: "Kosher",
-  food_type: "Meat",
+  food_type: "Bread",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.lidl-recettes.fr/var/lidl-recipes/storage/images/france/recettes/foccacia-aux-tomates-sechees-et-thym/1621921-1-fre-FR/Foccacia-aux-tomates-sechees-et-thym.jpg",
   business: rafa
   )
 
@@ -395,6 +405,7 @@ bugsy_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://beteavone.com/wp-content/uploads/2016/12/18301074_1517604234930239_3964497955489200691_n-697x415.jpg",
   business: rafa
   )
 
@@ -406,10 +417,11 @@ bugsy_3 = Food.create!(
   portion: portion_foods.sample,
   sku: "bf/B-2",
   dietary_category: "Kosher",
-  food_type: "Meat",
+  food_type: "Fish",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqRu6qaXIRu1DmDy-G_MssS1itt3hNi623UK_3e49Ogk1a8UuOg",
   business: rafa
   )
 
@@ -428,11 +440,12 @@ carmen_1 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://beteavone.com/wp-content/uploads/2016/12/16177932_1406686262688704_7325763277443060621_o-697x415.jpg",
   business: sasha
   )
 
 carmen_2 = Food.create!(
-  name: "Sea Bream",
+  name: "Sea Bream Fillet",
   description: "served with special sauce",
   price: 30,
   portion: portion_foods.sample,
@@ -442,6 +455,7 @@ carmen_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://www.gordonramsay.com/assets/Recipes/_resampled/CroppedFocusedImage108081050-50-Seabream-Salsa-231.jpg",
   business: sasha
   )
 
@@ -458,6 +472,7 @@ carmen_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://farm9.staticflickr.com/8696/17281691802_496efe869e_b.jpg",
   business: sasha
   )
 
@@ -475,6 +490,7 @@ boutique_central_1 = Food.create!(
   order_before: DateTime.new(2018,2,3,11),
   pickup_start: DateTime.new(2018,2,3,13,30),
   pickup_end: DateTime.new(2018,2,3,18,30),
+  remote_photo_url: "https://thefirstyearblog.com/wp-content/uploads/2017/12/Chocolate-Velvet-Cake-7.jpg",
   business: david
   )
 
@@ -489,6 +505,7 @@ boutique_central_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,11),
   pickup_start: DateTime.new(2018,2,3,13,30),
   pickup_end: DateTime.new(2018,2,3,18,30),
+  remote_photo_url: "https://image.freepik.com/photos-libre/des-delicieux-croissants-savoureux-sur-une-planche-de-bois-petit-dejeuner-continental-traditionnel-granola-aux-fruits-et-au-miel-sur-le-fond_1220-1320.jpg",
   business: david
   )
 
@@ -503,6 +520,7 @@ boutique_central_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,11),
   pickup_start: DateTime.new(2018,2,3,13,30),
   pickup_end: DateTime.new(2018,2,3,18,30),
+  remote_photo_url: "https://image.afcdn.com/recipe/20160502/16428_w420h344c1cx2000cy3000.jpg",
   business: david
   )
 
@@ -520,6 +538,7 @@ cafe_landwer_1 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tuna-and-onion-white-pizza-484487.jpg",
   business: marian
   )
 
@@ -535,14 +554,15 @@ cafe_landwer_2 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://cdn.cpnscdn.com/static.coupons.com/ext/kitchme/images/recipes/600x400/balsamic-tomato-basil-pasta_6300.jpg",
   business: marian
   )
 
 
 
 cafe_landwer_3 = Food.create!(
-  name: "Lebanon vegan salad",
-  description: "Borgol, quinoa, tomato, parsley with mint and scallion mix, colored peppers, almond chips and pumpkin seeds, seasoned with lemon-mint sauce, Lentil Patty Bites and Tahini",
+  name: "Nouga Dessert",
+  description: "A sweet taste for the day",
   price: 10,
   portion: portion_foods.sample,
   sku: "lv/CL-3",
@@ -551,6 +571,7 @@ cafe_landwer_3 = Food.create!(
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
   pickup_end: DateTime.new(2018,2,3,23,30),
+  remote_photo_url: "https://image.afcdn.com/recipe/20180330/78308_w420h344c1cx2808cy1872cxt0cyt0cxb5616cyb3744.jpg",
   business: marian
   )
 

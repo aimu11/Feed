@@ -23,7 +23,7 @@
         <%= link_to cart_path(current_user.customer.cart) do %>
           <%= image_tag 'shopping-cart-red.png', class: "avatar" %>
         <% end %>
-        <%= current_user.customer.cart.cart_details.size %>
+        <div id="num-items"><%= current_user.customer.cart.cart_details.size %></div>
       <% end %>
       <% end %>
 
@@ -66,4 +66,5 @@
     </div>
   </div>
 </div>
+
 
