@@ -15,6 +15,7 @@ class FoodsController < ApplicationController
         lat: food.business.latitude,
         lng: food.business.longitude,
         icon: meal_icon,
+        food_id: food.id,
         restaurant: {
           name: food.business.name,
           address: food.business.address
