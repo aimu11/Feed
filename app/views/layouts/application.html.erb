@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/png" href="https://image.ibb.co/dq9Uhe/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Nunito:900,400,800">
   </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>" >
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
