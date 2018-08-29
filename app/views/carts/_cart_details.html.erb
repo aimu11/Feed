@@ -12,7 +12,13 @@
 
     <div class="pick-info">
       <div class="portions-and-number">
-        <li class="portion"><%= cart_detail.quantity %></li>
+        <li class="portion">
+        <% if cart_detail.quantity == nil %>
+          <%= "0" %>
+        <% else %>
+          <%= cart_detail.quantity %>
+        <% end %>
+      </li>
         <li>Portion</li>
       </div>
     </div>
