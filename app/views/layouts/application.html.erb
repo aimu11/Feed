@@ -11,17 +11,18 @@
     <link rel="shortcut icon" type="image/png" href="https://image.ibb.co/dq9Uhe/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Nunito:900,400,800">
   </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>" >
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'slider_carousel' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
 
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag "map" %>
     <%= javascript_pack_tag "navbar" %>
+    <%= javascript_pack_tag "dashboard_tab" %>
+
     <%= yield(:after_js) %>
   </body>
 </html>
