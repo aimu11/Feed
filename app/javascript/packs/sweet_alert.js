@@ -1,7 +1,6 @@
 // ES6 Modules or TypeScript
 import swal from 'sweetalert2'
 
-console.log('okk')
 
 const btns = document.querySelectorAll(".cart-btn");
 
@@ -14,9 +13,9 @@ btns.forEach((btn) => {
     const amount = parseInt(num.innerText) + 1;
     num.innerText = amount;
 
-    const prt = document.getElementById("prtn");
-    const qtn = parseInt(prt.innerText) - 1;
-    prt.innerText = qtn;
+    // const prt = document.getElementById("prtn");
+    // const qtn = parseInt(prt.innerText) - 1;
+    // prt.innerText = qtn;
 
 
     const swalWithBootstrapButtons = swal.mixin({
