@@ -1,6 +1,6 @@
 <div class="navbar-wagon <%= yield(:navbar_class) %> <%= 'index-page' if @index_page %>">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to foods_path, class: "navbar-wagon-brand" do %>
     <% if @home %>
       <%= image_tag "meal_icon_white.png", height: 120 %>
       <h4 class="white-name">Feed</h4>
@@ -39,7 +39,7 @@
                    <%= t(".dashboard", default: "Dashboard") %>
                 <% end %>
               <% else %>
-                <%= link_to dashboard_path(@user) do %>
+                <%= link_to dashboard_path(@user, :anchor => "pills-current-orders") do %>
                    <%= t(".dashboard", default: "Dashboard") %>
                 <% end %>
               <% end %>
