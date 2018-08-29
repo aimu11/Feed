@@ -1,18 +1,25 @@
-
-
-<div class="current_orders">
-
-              <% current_user.customer.orders.each do |order| %>
-                <li>
-                  <b><%= order.food.name %></b>
-                  from
-                  <%= order.food.business.name %>
-                  at
-                  <%= order.food.business.address %>
-                  to pickup by
-                  <%= order.food.pickup_end.strftime("%I:%M %p") %>
-                  tonight
-                </li>
-              <% end %>
-
-</div>
+<% i = 0 %>
+<% current_user.customer.orders.each do |order| %>
+  <% if order.food.pickup_end.to_date.future? == true %>
+    <div class="card-current-order">
+      <div class="order-number"><%= i = i + 1  %></div>
+      <div class="food-info">
+        <div class="food-name"><li>Food: <%= order.food.name %></li></div>
+        <li>Dietary Category: <%= order.food.dietary_category%></li>
+      </div>
+    <hr>
+      <div class="pick-info">
+        <div class="portions-and-number">
+          <li class="portion"><%= order.food.portion %></li>
+          <li>Portions</li>
+        </div>
+        <li>Pickup Time: <%= order.food.pickup_start.strftime("%I:%M %p")  %> - <%= order.food.pickup_end.strftime("%I:%M %p") %></li>
+      </div>
+      <hr>
+      <div class="cust-info">
+        <div class="made-by"><li >Made by <%= order.food.business.name %> <%= order.food.business.address %></li></div>
+        <li class= "price-style"><%= humanized_money_with_symbol(order.food.price) %>.00</li>
+      </div>
+    </div>
+  <% end %>
+<% end %>
