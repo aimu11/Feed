@@ -34,12 +34,11 @@
           <%= image_tag "avatar-icon.png", class: "avatar dropdown-toggle shopping-cart-white", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <% if current_user.business && !@home %>
+              <% if current_user.business %>
                 <%= link_to business_dashboard_path(:anchor => "pills-current-orders") do %>
                    <%= t(".dashboard", default: "Dashboard") %>
                 <% end %>
               <% else %>
-
                 <%= link_to dashboard_path(@user) do %>
                    <%= t(".dashboard", default: "Dashboard") %>
                 <% end %>
@@ -73,4 +72,3 @@
     </div>
   </div>
 </div>
-
