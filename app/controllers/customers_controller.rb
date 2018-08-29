@@ -8,7 +8,6 @@ class CustomersController < ApplicationController
 
   def dashboard
     @customer = current_user.customer
-    @cart    = @customer.cart
   end
 
   def new

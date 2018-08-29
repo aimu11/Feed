@@ -1,5 +1,4 @@
 // Instantiate the Bootstrap carousel
-/*
 $('.multi-item-carousel').carousel({
   interval: false
 });
@@ -19,4 +18,3 @@ $('.multi-item-carousel .item').each(function(){
   	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
   }
 });
-*/
