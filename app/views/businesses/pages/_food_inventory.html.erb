@@ -8,7 +8,7 @@
             <div class="item active" >
               <div class="col-xs-4">
                 <div class="food-card">
-                <div class="food-img" style="background-image: url('<%= cl_image_path(@first_item.photo) unless @first_item.photo.blank? %>')">
+                <div class="food-img" style="background-image: url('<%= image_path "salad2.png" %>")>
                 </div>
                 <div class="food-details">
                   <h2><%= @first_item.name %></h2>
@@ -42,7 +42,7 @@
             <div class="item" >
               <div class="col-xs-4">
                 <div class="food-card">
-                  <div class="food-img" style="background-image: url(<%= cl_image_path(food.photo) unless food.photo.blank? %>)">
+                  <div class="food-img" style="background-image: url('<%= image_path "salad2.png" %>') >
                   </div>
                 <div class="food-details">
                   <h2><%= food.name %></h2>
