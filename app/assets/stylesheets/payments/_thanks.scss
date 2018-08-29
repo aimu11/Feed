@@ -1,23 +1,25 @@
 .cont-thanks {
   text-align: center;
   position: absolute;
-  margin: auto;
+  margin: 50px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100px;
+
 }
 
 .dashb-btn, .homebtn {
-  margin-top: 15px;
-  display: inline-block;
-  background-color: #D05B71;
-  padding: 10px 15px;
-  border-radius: 7%;
-  .dashb-btn {
-    margin-right: 100px;
-  }
+    background-color: #D4FFD1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
 }
+
 
 
