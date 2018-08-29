@@ -1,7 +1,6 @@
- <!-- <div class="orders-container"> -->
-            <ul class="list-group">
+
               <% current_user.customer.orders.each do |order| %>
-                <li class="list-group-item">
+                <li>
                   <b><%= order.food.name %></b>
                   from
                   <%= order.food.business.name %>
@@ -13,6 +12,3 @@
                 </li>
               <% end %>
             </ul>
-
-          </div>
-        <!-- </div> -->
