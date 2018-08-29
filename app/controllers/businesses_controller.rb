@@ -8,9 +8,9 @@ class BusinessesController < ApplicationController
 
   def dashboard
     @inventory = current_user.business.foods.map {|f| f}
-    @first_item = @inventory[0..2]
+    @first_item = @inventory[0]
 
-    @food_without_first = @inventory.shift(2)
+    @food_without_first = @inventory[1..-1]
 
     @food = Food.new
 
