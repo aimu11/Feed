@@ -18,7 +18,7 @@
     <div class="category-row">
       <div class="title-category">Category:</div>
         <div class="content-category">
-         <%= current_user.business.dietary_category %>     <%= image_tag "bread.png" %>
+         <%= current_user.business.dietary_category %>  <div class="diet_cat" style="margin-left:15px;">   <%= image_tag "bread.png" %></div>
         </div>
         <div class="edit-button">
           <%= link_to "Edit", edit_business_path(current_user.business)  %>

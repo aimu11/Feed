@@ -1,1 +1,36 @@
-Edit your food item 
+
+<div class="food-edit-container dashboard-container">
+<h3>Edit the  <%= @foods.name %></h3>
+<%= link_to "Return to Inventory", business_dashboard_path(:anchor => "pills-inventory") %>
+
+<div class="form">
+<%= simple_form_for @foods do |f| %>
+<%= f.error_notification %>
+
+<%= f.input :photo %>
+<%= f.input :photo_cache, as: :hidden %>
+
+<%= f.input :name %>
+<%= f.input :description, as: :text, :input_html => { :rows => 4 , :style => 'width: 100%'} %>
+
+<%= f.input :portion %>
+<%= f.input :dietary_category, :collection => %w[Vegan Vegetarian Bio Kosher Gluten Free] %>
+
+<%= f.input :food_type, :collection => %w[Meat Dairy Produce Beverage Other] %>
+
+
+<%= f.input :order_before, as: :datetime, html5: true %>
+<%= f.input :pickup_start, as: :datetime, html5: true %>
+<%= f.input :pickup_end, as: :datetime, html5: true %>
+
+<%= f.input :sku %>
+
+
+<%= f.input :price_cents %>
+
+<%= f.button :submit, class: "btn-primary" %>
+<%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+
+<% end %>
+</div>
+</div>
