@@ -2,10 +2,11 @@
 
 <div class="profile-edit-container">
   <h3>Your Profile details</h3>
+  <div class="form">
   <%= simple_form_for @business do |f| %>
     <%= f.error_notification %>
 
-    <%= f.input :description, input_html: { class: "form-control", id: "formGroupExampleInput" } %>
+    <%= f.input :description, as: :text, :input_html => { :rows => 4 , :style => 'width: 100%', class: "form-control", id: "formGroupExampleInput"} %>
     <%= f.input :dietary_category %>
     <%= f.input :address %>
 
@@ -13,3 +14,4 @@
     <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
 
     <% end %>
+    </div>

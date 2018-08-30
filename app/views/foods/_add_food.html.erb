@@ -8,7 +8,7 @@
     <%= f.input :photo_cache, as: :hidden %>
 
     <%= f.input :name %>
-    <%= f.input :description %>
+    <%= f.input :description, as: :text, :input_html => { :rows => 4 , :style => 'width: 100%'} %>
 
     <%= f.input :portion %>
     <%= f.input :dietary_category, :collection => %w[Vegan Vegetarian Bio Kosher Gluten Free] %>
@@ -25,6 +25,6 @@
 
     <%= f.input :price_cents %>
 
-    <%= f.submit "Sell" %>
+    <%= f.submit "Sell", class: "btn-primary" %>
   <% end %>
 </div>

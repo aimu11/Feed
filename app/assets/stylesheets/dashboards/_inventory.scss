@@ -1,4 +1,22 @@
+.food-edit-container {
+  padding: 20px;
+  margin: 0 auto;
+  .form {
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 50%;
+  }
+  label {
+    font : 14px "Nunito", sans-serif;
+    font-weight: bold;
+    width: 25%;
+    height: 10px;
+  }
+}
+
 .businesses.dashboard {
+
+
 
 .food-inventory-container {
   display:flex;
