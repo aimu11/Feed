@@ -237,7 +237,7 @@ entrecote_meals_1 = Food.create!(
   food_type: "Fish",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "https://beteavone.com/wp-content/uploads/2016/12/12068858_1060246877332646_1249838114918248905_o-697x415.jpg",
   business: roger
   )
@@ -252,7 +252,7 @@ entrecote_meals_2 = Food.create!(
   food_type: "Meat",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "http://hbkburger.fr/wp-content/uploads/2015/09/parguit.jpg",
   business: roger
   )
@@ -268,7 +268,7 @@ entrecote_meals_3 = Food.create!(
   food_type: "Meat",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "https://www.booths.co.uk/wp-content/uploads/p8_brazilian_kebab_web-660x371.jpg",
   business: roger
   )
@@ -339,7 +339,7 @@ bino_bepita_meals_1 = Food.create!(
   food_type: "Oriental",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "http://www.restaurantcacher.com/restaurant-cacher/as-du-fallafel/images/slider/as-du-fallafel-2.jpg",
   business: novak
   )
@@ -355,7 +355,7 @@ bino_bepita_meals_2 = Food.create!(
   food_type: "Oriental",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "https://hips.hearstapps.com/del.h-cdn.co/assets/17/31/1501791674-delish-chicken-curry-horizontal.jpg",
   business: novak
   )
@@ -373,7 +373,7 @@ bino_bepita_meals_3 = Food.create!(
   food_type: "Oriental",
   order_before: DateTime.new(2018,2,3,18),
   pickup_start: DateTime.new(2018,2,3,21,30),
-  pickup_end: DateTime.new(2018,2,3,23,30),
+  pickup_end: DateTime.new(2018,11,3,23,30),
   remote_photo_url: "https://www.simplyrecipes.com/wp-content/uploads/2011/07/beef-kabobs-horiz-a-1600.jpg",
   business: novak
   )
@@ -608,11 +608,3 @@ food = Food.last
 
 customer.cart.cart_details << CartDetail.new(food: food)
 customer.save!
-
-
-
-
-
-
-
-

@@ -1,6 +1,7 @@
 .multi-item-carousel{
-  max-width:70vw;
+  max-width:80vw;
   .carousel-inner{
+
     > .item{
       transition: 500ms ease-in-out left;
     }

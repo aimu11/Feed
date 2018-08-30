@@ -1,6 +1,6 @@
 <% i = 0 %>
 <% current_user.customer.orders.each do |order| %>
-  <% if order.food.pickup_end.future? == true %>
+  <% if order.food.pickup_end? %>
     <div class="card-current-order">
       <div class="order-number"><%= i = i + 1  %></div>
       <div class="food-info">
@@ -15,7 +15,7 @@
         </div>
         <li>Pickup Time: <%= order.food.pickup_start.strftime("%I:%M %p")  %> - <%= order.food.pickup_end.strftime("%I:%M %p") %></li>
       </div>
-      <hr>
+
       <div class="cust-info">
         <div class="made-by"><li >Made by <%= order.food.business.name %> <%= order.food.business.address %></li></div>
         <li class= "price-style"><%= humanized_money_with_symbol(order.food.price) %>.00</li>
