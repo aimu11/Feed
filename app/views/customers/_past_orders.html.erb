@@ -1,7 +1,7 @@
-
+<% i = 0 %>
 <% current_user.customer.orders.each do |order| %>
   <% if order.food.pickup_end.to_date.future? == false %>
-<% i = 0 %>
+
 
 <div class="card-current-order">
   <div class="order-number">
